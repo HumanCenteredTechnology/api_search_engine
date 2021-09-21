@@ -1,0 +1,12 @@
+2021-09-21 12:19:03:wordhoard.utilities.basic_soup:ERROR: Response Status Code: 404
+2021-09-21 12:19:03:wordhoard.utilities.basic_soup:ERROR: The HTTP 404 Not Found status code means that the file or page that the was requested was not found on the server
+2021-09-21 12:19:03:wordhoard.utilities.basic_soup:ERROR: Associated URL: https://www.merriam-webster.com/thesaurus/Obama
+2021-09-21 12:19:03:wordhoard.synonyms:INFO: Merriam-webster.com had no synonym reference for the word Obama
+2021-09-21 12:19:04:wordhoard.utilities.basic_soup:ERROR: Response Status Code: 404
+2021-09-21 12:19:04:wordhoard.utilities.basic_soup:ERROR: The HTTP 404 Not Found status code means that the file or page that the was requested was not found on the server
+2021-09-21 12:19:04:wordhoard.utilities.basic_soup:ERROR: Associated URL: https://www.synonym.com/synonyms/Obama
+2021-09-21 12:19:04:wordhoard.synonyms:INFO: Synonym.com had no synonym reference for the word Obama
+2021-09-21 12:19:04:wordhoard.utilities.basic_soup:ERROR: Response Status Code: 404
+2021-09-21 12:19:04:wordhoard.utilities.basic_soup:ERROR: The HTTP 404 Not Found status code means that the file or page that the was requested was not found on the server
+2021-09-21 12:19:04:wordhoard.utilities.basic_soup:ERROR: Associated URL: https://www.thesaurus.com/browse/Obama
+2021-09-21 12:19:04:wordhoard.synonyms:INFO: Thesaurus.com had no synonym reference for the word Obama

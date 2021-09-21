@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, request, render_template
+from flask import Flask, send_from_directory, request, render_template,jsonify
 import tagme
 import csv
 from wordhoard import Synonyms
@@ -18,7 +18,7 @@ def search_web():
    _input = request.form.get('search-input')
    _results = search(_input)
    print(_results)
-   return render_template('results.html', results=_results)
+   return jsonify(_results)
 
 
 def search(_input):
