@@ -1,0 +1,116 @@
+Product Innovation,Problems,https://en.wikipedia.org/wiki/Product_innovation
+Predictive maintenance,Problems,https://en.wikipedia.org/wiki/Predictive_maintenance
+Product Servitization,Problems,https://en.wikipedia.org/wiki/Service_economy
+Product Usability Improvement,Problems,https://en.wikipedia.org/wiki/Usability
+Improvement of the After Sales,Problems,https://en.wikipedia.org/wiki/Customer_service
+Automatic Consumables Reordering,Problems,https://en.wikipedia.org/wiki/Spare_part
+Inventory Management,Problems,https://en.wikipedia.org/wiki/Inventory_control
+Cost and Number of parts Reduction,Problems,https://en.wikipedia.org/wiki/Cost_reduction
+Smart Products,Problems,https://en.wikipedia.org/wiki/Smart_object
+Process Optimization,Problems,https://en.wikipedia.org/wiki/Process_optimization
+Real-time Production Monitoring and Supervision,Problems,https://en.wikipedia.org/wiki/Warehouse_control_system
+Smart Scheduling,Problems,https://en.wikipedia.org/wiki/Master_production_schedule
+Worker Attention and Mental State Monitoring,Problems,https://en.wikipedia.org/wiki/Attentional_control
+Time and Method smart measurement,Problems,https://en.wikipedia.org/wiki/Performance_indicator
+Horizontal Interconnection and Integration,Problems,https://en.wikipedia.org/wiki/Horizontal_integration
+Production On Demand,Problems,https://en.wikipedia.org/wiki/Lean_manufacturing
+Smart Warehouse IoT Solutions for Warehouse Management,Problems,https://en.wikipedia.org/wiki/Warehouse_management_system
+Supply Chain Transparency and Reliability Improvement,Problems,https://en.wikipedia.org/wiki/Supply_chain_management
+Horizontal/Vertical Integration ,Technology,
+DataBases,Technology,https://en.wikipedia.org/wiki/Database
+SQL DB,Technology,https://it.wikipedia.org/wiki/Structured_Query_Language
+Non SQL DB ,Technology,https://en.wikipedia.org/wiki/NoSQL
+Time series DB ,Technology,https://en.wikipedia.org/wiki/Time_series_database
+influxDB ,Technology,https://en.wikipedia.org/wiki/InfluxDB
+Prometheus,Technology,https://en.wikipedia.org/wiki/Prometheus_(software)
+Graphite,Technology,https://en.wikipedia.org/wiki/Graphite_(software)
+Blockchain ,Technology,https://en.wikipedia.org/wiki/Blockchain
+Connectivity ,Technology,https://en.wikipedia.org/wiki/Telecommunications_network
+GSM/4G/5G ,Technology,
+MQTT,Technology,https://en.wikipedia.org/wiki/MQTT
+REST API and Webhook ,Technology,https://en.wikipedia.org/wiki/Representational_state_transfer
+RFID/NFC ,Technology,https://en.wikipedia.org/wiki/Near-field_communication
+Bluetooth ,Technology,https://en.wikipedia.org/wiki/Bluetooth
+LPWAN (Low power wide area network) ,Technology,https://en.wikipedia.org/wiki/Low-power_wide-area_network
+Industrial Internet ,Technology,
+Industrial IOT ,Technology,https://en.wikipedia.org/wiki/Industrial_internet_of_things
+Industrial communication protocols ,Technology,https://en.wikipedia.org/wiki/Industrial_Ethernet
+Ethernet Protocols (EtherNet/IP,Technology,https://en.wikipedia.org/wiki/Ethernet
+Fieldbus Protocols (Profibus DP,Technology,https://en.wikipedia.org/wiki/Fieldbus
+Wireless Protocols (WLAN,Technology,https://en.wikipedia.org/wiki/IEEE_802.11
+Industrial Gateway and data acquisition device,Technology,https://en.wikipedia.org/wiki/Gateway_(telecommunications)
+Cloud,Technology,https://en.wikipedia.org/wiki/Cloud_computing
+Container technology ,Technology,https://en.wikipedia.org/wiki/OS-level_virtualization
+Docker,Technology,https://en.wikipedia.org/wiki/Docker_(software)
+Kubernates,Technology,https://en.wikipedia.org/wiki/Kubernetes
+Terraform ,Technology,https://en.wikipedia.org/wiki/Terraform_(software)
+Serverless programming ,Technology,https://en.wikipedia.org/wiki/Serverless_computing
+AWS Lambda functions,Technology,https://en.wikipedia.org/wiki/AWS_Lambda
+Azure functions ,Technology,
+Device Management ,Technology,
+Zerynth Device Manager ,Technology,
+Aws IoT Device Management,Technology,
+Azure IOT Hub ,Technology,
+WinCC OA IOT OPA ,Technology,
+Cloud Data Storage ,Technology,
+AWS S3,Technology,
+Google Cloud Storage,Technology,
+Microsoft Azure Storage ,Technology,
+Edge computing ,Technology,
+AWS green grass,Technology,
+Azure Edge IoT ,Technology,
+Custom solutions based on docker swarm,Technology,
+Multi-access edge computing (MEC) ,Technology,
+AWS Wavelength,Technology,
+Big Data and Analytics,Technology,
+Data science,Technology,
+Data Visualization and Dashboarding,Technology,
+Grafana,Technology,
+Kibana,Technology,
+Metabase,Technology,
+Data Analytics ,Technology,
+Data lake and Data Warehouse design,Technology,
+Data Mining ,Technology,
+Python (Numpy,Technology,
+R,Technology,
+Julia,Technology,
+All-inclusive tools ,Technology,
+Tableau,Technology,
+PowerBI,Technology,
+Elastic Stack,Technology,
+SAP Business Intelligence,Technology,
+QlikView/Qlik Sense ,Technology,
+Data engines ,Technology,
+Apache Hadoop,Technology,
+Apache Kafka,Technology,
+Apache Spark,Technology,
+IoT ,Technology,
+Signal Processing,Technology,
+AI   ,Technology,
+Machine learning ,Technology,
+Deep Learning ,Technology,
+Reinforcement Learning,Technology,
+Continuous Learning,Technology,
+Computer Vision ,Technology,
+Natural Language Processing,Technology,
+Advanced Manufacturing Solutions,Technology,
+Embedded Computing,Technology,
+Microcontroller programming and RTOS ,Technology,
+Arduino ,Technology,
+STM32 ,Technology,
+ESP32,Technology,
+FPGA,Technology,
+Microprocessor programming and embedded Linux  ,Technology,
+RaspberryPi,Technology,
+Other SBC,Technology,
+Sensors (hardware) ,Technology,
+Signal Processing ,Technology,
+Blockchain ,Technology,
+ Connectivity ,Technology,
+GSM/4G/5G ,Technology,
+MQTT,Technology,
+REST API and Webhook ,Technology,
+RFID/NFC ,Technology,
+Bluetooth ,Technology,
+LPWAN (Low power wide area network) ,Technology,
+
