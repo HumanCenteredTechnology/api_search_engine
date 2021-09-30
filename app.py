@@ -1,7 +1,7 @@
 from flask import Flask, send_from_directory, request, render_template,jsonify
 import tagme
 import csv
-from wordhoard import Synonyms
+# from wordhoard import Synonyms
 import sqlite3
 
 tagme.GCUBE_TOKEN = "cbaed484-466a-44cd-a27d-610036404f01-843339462"
@@ -24,17 +24,30 @@ def search_web_json():
 def search_web():
    _input = request.form.get('search-input')
    _results = search(_input)
+   print(_results)
    return render_template('results.html',results=_results)
 
+
 def search(_input):
-   _mentions = tagme_api(_input)
-   if(len(_mentions) == 0):
-    return []
-   else:
-       _topics=search_into_taxonomy(_mentions)
+    _mentions = tagme_api(_input)
+    if(len(_mentions) == 0):
+        return []
+    else:
+       _topics = search_into_taxonomy(_mentions)
+       _use_cases=find_use_cases(_topics)
 
-    return 
+    return {"topics":_topics,"related_elements":_use_cases}
 
+def find_use_cases(_topics):
+    con = sqlite3.connect('taxonomy.db')
+    cur = con.cursor()
+    _use_cases=[]
+    for _topic in _topics:
+        for row in cur.execute(f"SELECT * FROM relations WHERE name LIKE '%{_topic[0]}%'"):
+            if(len(row[2])>0):
+                _use_cases.append(row)
+    return _use_cases
+        
 
 def search_into_taxonomy(_mentions):
     _results = []
@@ -46,10 +59,10 @@ def search_into_taxonomy(_mentions):
             for row in cur.execute(f"SELECT * FROM taxonomy WHERE name LIKE '%{_word}%'"):
                 if(row not in _results):
                     _results.append(row)
+    con.close()
     return _results
 
 
-def get_related_topics(_topics):
     
 
 def get_variations(_word):

@@ -8,10 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>{{ search }}</title>
+    <title>Results</title>
   </head>
   <body>
-	{% if results %}
+    
+	{% if results['topics'] %}
+  <h3>Topics Founded</h3>
     <table class="table">
   <thead>
     <tr>
@@ -21,7 +23,7 @@
     </tr>
   </thead>
   <tbody>
-   {% for result in results %}
+   {% for result in results['topics'] %}
 	<tr>
 		<td> {{ result[0] }} </td>
 		<td> {{ result[1] }} </td>
@@ -31,7 +33,33 @@
   </tbody>
 </table>
 	{% else %}
-	<h1>There are not results for the query </h1>
+	<h1>There are nottopics</h1>
+	{% endif %}
+
+  {% if results['related_elements'] %}
+  <h3>Use Cases Founded</h3>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Link</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for result in results['related_elements'] %}
+	<tr>
+		<td> {{ result[0] }} </td>
+		<td> {{ result[1] }} </td>
+		<td> {{ result[2] }} </td>
+    <td> {{ result[3] }} </td>
+	</tr>
+   {% endfor %}
+  </tbody>
+</table>
+	{% else %}
+	<h1>There are nottopics</h1>
 	{% endif %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
