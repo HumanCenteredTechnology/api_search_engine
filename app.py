@@ -19,11 +19,34 @@ def search_web_json():
    _results = search(_input)
    return jsonify(_results)
 
-# @app.route("/", methods=["POST"])
-# def search_web():
-#    _input = request.form.get('search-input')
-#    _results = search(_input)
-#    return render_template('results.html',results=_results)
+
+@app.route("/not_json_add_article", methods=["POST"])
+def add_article_results():
+   _title = request.form.get('title')
+   _abstract = request.form.get('abstract')
+   _body = request.form.get('body')
+   _annotations=list(tagme.annotate(_title).get_annotations(0.1))+list(tagme.annotate(_abstract).get_annotations(0.1))+list(tagme.annotate(_body).get_annotations(0.1))
+   left_side,right_side=search_on_taxonomy(_annotations)
+   return render_template('add_article_results.html',results={"founded_elements":left_side,"not_founded_elements":right_side})
+
+@app.route("/add_article", methods=["POST"])
+def add_article_results_json():
+   _title = request.form.get('title')
+   _abstract = request.form.get('abstract')
+   _body = request.form.get('body')
+   _annotations=list(tagme.annotate(_title).get_annotations(0.1))+list(tagme.annotate(_abstract).get_annotations(0.1))+list(tagme.annotate(_body).get_annotations(0.1))
+   left_side,right_side=search_on_taxonomy(_annotations)
+   return jsonify({"founded_elements":left_side,"not_founded_elements":right_side})
+
+@app.route("/add_article", methods=["GET"])
+def add_article():
+    return render_template('add_article.html')
+
+@app.route("/not_json", methods=["POST"])
+def search_web():
+   _input = request.form.get('search-input')
+   _results = search(_input)
+   return render_template('results.html',results=_results)
 
 
 def search(_input):
@@ -77,38 +100,17 @@ def search_into_taxonomy(_mentions):
     con.close()
     return _results
 
+def search_on_taxonomy(_annotations):
+    left_side=[]
+    right_side=[]
+    for _annotation in _annotations:
+        if(len(search_into_taxonomy([_annotation.entity_title]))>0):
+            left_side=left_side+search_into_taxonomy([_annotation.entity_title])
+        else:
+            right_side.append(_annotation.entity_title)
+    return [left_side,right_side]
 
-    
 
-def get_variations(_word):
-    _variations=[]
-    if(_word[len(_word)-1]=="s"):
-        _variations.append(_word[0:-1])
-    else:
-        _variations.append(_word+"s")
-    if(_word[0].isupper()):
-        _variations.append(_word[0].lower()+_word[1:len(_word)])
-    else:
-        _variations.append(_word.capitalize())
-    return _variations
-
-def get_taxonomy_lower_striped():
-    _taxonomy = {}
-    csv_reader = None
-    with open('taxonomy.csv', 'r') as csv_file:
-        csv_reader = csv.reader(csv_file, delimiter=',')
-        for row in csv_reader:
-            _taxonomy[row[0].lower().strip()]= {"mention": row[0],"category": row[1], "link": row[2]}
-    return _taxonomy
-
-def get_taxonomy():
-    _taxonomy = {}
-    csv_reader = None
-    with open('taxonomy.csv', 'r') as csv_file:
-        csv_reader = csv.reader(csv_file, delimiter=',')
-        for row in csv_reader:
-            _taxonomy[row[0].lower()]= {"mention": row[0],"category": row[1], "link": row[2]}
-    return _taxonomy
 
 def tagme_api(_input):
     _mentions = tagme.mentions(_input)
