@@ -1,7 +1,6 @@
 from flask import Flask, send_from_directory, request, render_template,jsonify
 import tagme
 import csv
-# from wordhoard import Synonyms
 import sqlite3
 
 tagme.GCUBE_TOKEN = "cbaed484-466a-44cd-a27d-610036404f01-843339462"
@@ -24,7 +23,6 @@ def search_web_json():
 def search_web():
    _input = request.form.get('search-input')
    _results = search(_input)
-   print(_results)
    return render_template('results.html',results=_results)
 
 
@@ -35,8 +33,23 @@ def search(_input):
     else:
        _topics = search_into_taxonomy(_mentions)
        _use_cases=find_use_cases(_topics)
-
+       _use_cases=retrieve_link_use_cases(_use_cases)
     return {"topics":_topics,"related_elements":_use_cases}
+
+
+def retrieve_link_use_cases(_old_use_cases):
+    con = sqlite3.connect('taxonomy.db')
+    cur = con.cursor()
+    _new_use_cases=list(_old_use_cases)
+    for i in range(0,len(_old_use_cases)):
+        if(len(_old_use_cases[i][2])>0):
+            _articles_id=_old_use_cases[i][2].split(",")
+            _links=[]
+            for _article_id in _articles_id:
+                _links.append(cur.execute(f"SELECT * FROM articles WHERE id={_article_id}").fetchone()[1])
+            _new_use_cases[i][2]=_links
+    con.close()
+    return _new_use_cases
 
 def find_use_cases(_topics):
     con = sqlite3.connect('taxonomy.db')
@@ -45,7 +58,8 @@ def find_use_cases(_topics):
     for _topic in _topics:
         for row in cur.execute(f"SELECT * FROM relations WHERE name LIKE '%{_topic[0]}%'"):
             if(len(row[2])>0):
-                _use_cases.append(row)
+                _use_cases.append(list(row))
+    con.close()
     return _use_cases
         
 
