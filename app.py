@@ -13,17 +13,17 @@ def hello_world():
     return send_from_directory('templates', 'home.html')
 
 
-@app.route("/", methods=["POST"])
+@app.route("/json", methods=["POST"])
 def search_web_json():
    _input = request.form.get('search-input')
    _results = search(_input)
    return jsonify(_results)
 
-# @app.route("/", methods=["POST"])
-# def search_web():
-#    _input = request.form.get('search-input')
-#    _results = search(_input)
-#    return render_template('results.html',results=_results)
+@app.route("/", methods=["POST"])
+def search_web():
+   _input = request.form.get('search-input')
+   _results = search(_input)
+   return render_template('results.html',results=_results)
 
 
 def search(_input):
@@ -58,7 +58,8 @@ def find_use_cases(_topics):
     for _topic in _topics:
         for row in cur.execute(f"SELECT * FROM relations WHERE name LIKE '%{_topic[0]}%'"):
             if(len(row[2])>0):
-                _use_cases.append(list(row))
+                if(list(row) not in _use_cases):
+                    _use_cases.append(list(row))
     con.close()
     return _use_cases
         
