@@ -13,17 +13,17 @@ def hello_world():
     return send_from_directory('templates', 'home.html')
 
 
-@app.route("/json", methods=["POST"])
+@app.route("/", methods=["POST"])
 def search_web_json():
    _input = request.form.get('search-input')
    _results = search(_input)
    return jsonify(_results)
 
-@app.route("/", methods=["POST"])
-def search_web():
-   _input = request.form.get('search-input')
-   _results = search(_input)
-   return render_template('results.html',results=_results)
+# @app.route("/", methods=["POST"])
+# def search_web():
+#    _input = request.form.get('search-input')
+#    _results = search(_input)
+#    return render_template('results.html',results=_results)
 
 
 def search(_input):
