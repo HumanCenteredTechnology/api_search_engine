@@ -67,10 +67,11 @@ def retrieve_link_use_cases(_old_use_cases):
     for i in range(0,len(_old_use_cases)):
         if(len(_old_use_cases[i][2])>0):
             _articles_id=_old_use_cases[i][2].split(",")
-            _links=[]
+            _articles_response=[]
             for _article_id in _articles_id:
-                _links.append(cur.execute(f"SELECT * FROM articles WHERE id={_article_id}").fetchone()[1])
-            _new_use_cases[i][2]=_links
+                _row=cur.execute(f"SELECT * FROM articles WHERE id={_article_id}").fetchone()
+                _articles_response.append([_row[1],_row[2]])
+            _new_use_cases[i][2]=_articles_response
     con.close()
     return _new_use_cases
 
