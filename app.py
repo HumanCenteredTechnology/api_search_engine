@@ -55,9 +55,37 @@ def search(_input):
         return []
     else:
        _topics = search_into_taxonomy(_mentions)
-       _use_cases=find_use_cases(_topics)
-       _use_cases=retrieve_link_use_cases(_use_cases)
-    return {"topics":_topics,"related_elements":_use_cases}
+       _use_cases=find_use_cases(_topics)       
+       _use_cases_unrelated=unrelated_use_cases(_use_cases,_topics[0][1])
+       _use_cases_related=retrieve_link_use_cases(_use_cases)
+    return {"topics":_topics,"related_elements":_use_cases_related,"unrelated_elements":_use_cases_unrelated}
+
+
+def unrelated_use_cases(_use_cases,_category):
+    _category=get_opposite_category(_category)
+    con = sqlite3.connect('taxonomy.db')
+    cur = con.cursor()
+    _problems=[]
+    for _use_case in _use_cases:
+        _articles=_use_case[2].split(",")
+        for _article in _articles:
+            _problems=_problems+list(cur.execute(f"SELECT DISTINCT * FROM relations WHERE (articles LIKE '%,{_article}%' OR articles LIKE '%{_article},%') AND category='{_category}' ").fetchall())
+    con.close()
+    _parsed_problems=[]
+    for _problem in _problems:
+        if(_problem not in _parsed_problems):
+            _parsed_problems.append({"elem":_problem,"count":_problems.count(_problem)})
+    
+    return list(set(_problems))
+        
+
+
+
+def get_opposite_category(_category):
+    if(_category=="Problems"):
+        return "Technology"
+    else:
+        return "Problems"
 
 
 def retrieve_link_use_cases(_old_use_cases):
