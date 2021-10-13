@@ -26,7 +26,7 @@ def add_article_results():
    _abstract = request.form.get('abstract')
    _body = request.form.get('body')
    _annotations=list(tagme.annotate(_title).get_annotations(0.1))+list(tagme.annotate(_abstract).get_annotations(0.1))+list(tagme.annotate(_body).get_annotations(0.1))
-   left_side,right_side=search_on_taxonomy(_annotations)
+   left_side,right_side=search_annotations_on_taxonomy(_annotations)
    return render_template('add_article_results.html',results={"founded_elements":left_side,"not_founded_elements":right_side})
 
 @app.route("/add_article", methods=["POST"])
@@ -35,7 +35,7 @@ def add_article_results_json():
    _abstract = request.form.get('abstract')
    _body = request.form.get('body')
    _annotations=list(tagme.annotate(_title).get_annotations(0.1))+list(tagme.annotate(_abstract).get_annotations(0.1))+list(tagme.annotate(_body).get_annotations(0.1))
-   left_side,right_side=search_on_taxonomy(_annotations)
+   left_side,right_side=search_annotations_on_taxonomy(_annotations)
    return jsonify({"founded_elements":left_side,"not_founded_elements":right_side})
 
 @app.route("/add_article", methods=["GET"])
@@ -129,14 +129,17 @@ def search_into_taxonomy(_mentions):
     con.close()
     return _results
 
-def search_on_taxonomy(_annotations):
+def search_annotations_on_taxonomy(_annotations):
     left_side=[]
     right_side=[]
     for _annotation in _annotations:
         if(len(search_into_taxonomy([_annotation.entity_title]))>0):
-            left_side=left_side+search_into_taxonomy([_annotation.entity_title])
+            for _entity in search_into_taxonomy([_annotation.entity_title]):
+                if(_entity not in left_side):
+                    left_side.append(_entity)
         else:
-            right_side.append(_annotation.entity_title)
+            if(_annotation.entity_title not in right_side):
+                right_side.append(_annotation.entity_title)
     return [left_side,right_side]
 
 
