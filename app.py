@@ -1,4 +1,5 @@
 from flask import Flask, send_from_directory, request, render_template,jsonify
+from autocomplete import Autocomplete
 import tagme
 import csv
 import sqlite3
@@ -6,7 +7,7 @@ import sqlite3
 tagme.GCUBE_TOKEN = "cbaed484-466a-44cd-a27d-610036404f01-843339462"
 
 app = Flask(__name__)
-
+autocomplete=Autocomplete()
 
 @app.route('/', methods=["GET"])
 def hello_world():
@@ -78,7 +79,10 @@ def unrelated_use_cases(_use_cases,_category):
     
     return list(set(_problems))
         
-
+@app.route("/search", methods=["GET"])
+def search():
+    word=request.args['word']
+    return jsonify({"word":autocomplete.search(word)})
 
 
 def get_opposite_category(_category):
