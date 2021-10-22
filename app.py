@@ -1,4 +1,5 @@
 from flask import Flask, send_from_directory, request, render_template,jsonify
+from flask_cors import CORS
 from autocomplete import Autocomplete
 import tagme
 import csv
@@ -7,6 +8,7 @@ import sqlite3
 tagme.GCUBE_TOKEN = "cbaed484-466a-44cd-a27d-610036404f01-843339462"
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 autocomplete=Autocomplete()
 
 @app.route('/', methods=["GET"])
