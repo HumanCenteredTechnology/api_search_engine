@@ -58,6 +58,8 @@ def search(_input):
        _topics = search_into_taxonomy(_mentions)
        _use_cases=find_use_cases(_topics)       
        _use_cases_unrelated=unrelated_use_cases(_use_cases,_topics[0][1])
+       print(_use_cases_unrelated)
+       _use_cases_unrelated = retrieve_link_use_cases(_use_cases_unrelated)
        _use_cases_related=retrieve_link_use_cases(_use_cases)
     return {"topics":_topics,"related_elements":_use_cases_related,"unrelated_elements":_use_cases_unrelated}
 
@@ -76,11 +78,13 @@ def unrelated_use_cases(_use_cases,_category):
     for _problem in _problems:
         if(_problem not in _parsed_problems):
             _parsed_problems.append({"elem":_problem,"count":_problems.count(_problem)})
-    
-    return list(set(_problems))
+    _problems=list(set(_problems))
+    for _problem in range(0,len(_problems)):
+        _problems[_problem]=list(_problems[_problem])
+    return _problems
         
 @app.route("/search", methods=["GET"])
-def search():
+def autocomplete():
     word=request.args['word']
     return jsonify({"word":autocomplete.search(word)})
 
