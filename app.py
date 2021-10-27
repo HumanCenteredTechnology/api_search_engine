@@ -58,12 +58,15 @@ def search(_input):
         return []
     else:
        _topics = search_into_taxonomy(_mentions)
-       _use_cases=find_use_cases(_topics)       
-       _use_cases_unrelated=unrelated_use_cases(_use_cases,_topics[0][1])
-       print(_use_cases_unrelated)
-       _use_cases_unrelated = retrieve_link_use_cases(_use_cases_unrelated)
-       _use_cases_related=retrieve_link_use_cases(_use_cases)
-    return {"topics":_topics,"related_elements":_use_cases_related,"unrelated_elements":_use_cases_unrelated}
+       if(len(_topics) == 0):
+           return {}
+       else:
+        _use_cases = find_use_cases(_topics)
+        print(_use_cases)
+        _use_cases_unrelated = unrelated_use_cases(_use_cases, _topics[0][1])
+        _use_cases_unrelated = retrieve_link_use_cases(_use_cases_unrelated)
+        _use_cases_related = retrieve_link_use_cases(_use_cases)
+        return {"topics": _topics, "related_elements": _use_cases_related, "unrelated_elements": _use_cases_unrelated}
 
 
 def unrelated_use_cases(_use_cases,_category):
