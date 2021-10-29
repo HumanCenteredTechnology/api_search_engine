@@ -55,14 +55,14 @@ def search_web():
 def search(_input):
     _mentions = tagme_api(_input)
     if(len(_mentions) == 0):
-        return []
+        return {}
     else:
        _topics = search_into_taxonomy(_mentions)
        if(len(_topics) == 0):
            return {}
        else:
+        print(_topics)
         _use_cases = find_use_cases(_topics)
-        print(_use_cases)
         _use_cases_unrelated = unrelated_use_cases(_use_cases, _topics[0][1])
         _use_cases_unrelated = retrieve_link_use_cases(_use_cases_unrelated)
         _use_cases_related = retrieve_link_use_cases(_use_cases)
@@ -70,7 +70,9 @@ def search(_input):
 
 
 def unrelated_use_cases(_use_cases,_category):
+    print("principal category",_category)
     _category=get_opposite_category(_category)
+    print("opposite category",_category)
     con = sqlite3.connect('taxonomy.db')
     cur = con.cursor()
     _problems=[]
@@ -89,8 +91,9 @@ def unrelated_use_cases(_use_cases,_category):
     return _problems
         
 @app.route("/search", methods=["GET"])
-def autocomplete():
+def suggestion():
     word=request.args['word']
+    print(word)
     return jsonify({"word":autocomplete.search(word)})
 
 
@@ -121,11 +124,14 @@ def find_use_cases(_topics):
     cur = con.cursor()
     _use_cases=[]
     for _topic in _topics:
-        for row in cur.execute(f"SELECT * FROM relations WHERE name LIKE '%{_topic[0]}%'"):
-            if(len(row[2])>0):
-                if(list(row) not in _use_cases):
-                    _use_cases.append(list(row))
+        _topic=_topic[0].strip()
+        query= f"SELECT * FROM relations WHERE name LIKE '%{_topic}%' ; "
+        rows=cur.execute(query).fetchall()
+        for row in rows:
+            if(row[2]!=""):
+                _use_cases.append(row)
     con.close()
+    print(_use_cases)
     return _use_cases
         
 
