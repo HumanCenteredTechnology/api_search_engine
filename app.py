@@ -12,19 +12,19 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 autocomplete=Autocomplete()
 
 @app.route('/', methods=["GET"])
-def hello_world():
+def template_search():
     return send_from_directory('templates', 'home.html')
 
 
 @app.route("/", methods=["POST"])
-def search_web_json():
+def search_api():
    _input = request.form.get('search-input')
    _results = search(_input)
    return jsonify(_results)
 
 
 @app.route("/not_json_add_article", methods=["POST"])
-def add_article_results():
+def add_article_template():
    _title = request.form.get('title')
    _abstract = request.form.get('abstract')
    _body = request.form.get('body')
@@ -33,7 +33,7 @@ def add_article_results():
    return render_template('add_article_results.html',results={"founded_elements":left_side,"not_founded_elements":right_side})
 
 @app.route("/add_article", methods=["POST"])
-def add_article_results_json():
+def add_article_json():
    _title = request.form.get('title')
    _abstract = request.form.get('abstract')
    _body = request.form.get('body')
@@ -42,11 +42,11 @@ def add_article_results_json():
    return jsonify({"founded_elements":left_side,"not_founded_elements":right_side})
 
 @app.route("/add_article", methods=["GET"])
-def add_article():
+def add_article_form_template():
     return render_template('add_article.html')
 
 @app.route("/not_json", methods=["POST"])
-def search_web():
+def search_api_template():
    _input = request.form.get('search-input')
    _results = search(_input)
    return render_template('results.html',results=_results)
@@ -61,7 +61,6 @@ def search(_input):
        if(len(_topics) == 0):
            return {}
        else:
-        print(_topics)
         _use_cases = find_use_cases(_topics)
         _use_cases_unrelated = unrelated_use_cases(_use_cases, _topics[0][1])
         _use_cases_unrelated = retrieve_link_use_cases(_use_cases_unrelated)
@@ -70,9 +69,7 @@ def search(_input):
 
 
 def unrelated_use_cases(_use_cases,_category):
-    print("principal category",_category)
     _category=get_opposite_category(_category)
-    print("opposite category",_category)
     con = sqlite3.connect('taxonomy.db')
     cur = con.cursor()
     _problems=[]
@@ -93,7 +90,6 @@ def unrelated_use_cases(_use_cases,_category):
 @app.route("/search", methods=["GET"])
 def suggestion():
     word=request.args['word']
-    print(word)
     return jsonify({"word":autocomplete.search(word)})
 
 
@@ -108,6 +104,7 @@ def retrieve_link_use_cases(_old_use_cases):
     con = sqlite3.connect('taxonomy.db')
     cur = con.cursor()
     _new_use_cases=list(_old_use_cases)
+    print(_new_use_cases)
     for i in range(0,len(_old_use_cases)):
         if(len(_old_use_cases[i][2])>0):
             _articles_id=_old_use_cases[i][2].split(",")
@@ -129,9 +126,8 @@ def find_use_cases(_topics):
         rows=cur.execute(query).fetchall()
         for row in rows:
             if(row[2]!=""):
-                _use_cases.append(row)
+                _use_cases.append(list(row))
     con.close()
-    print(_use_cases)
     return _use_cases
         
 
