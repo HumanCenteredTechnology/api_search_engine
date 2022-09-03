@@ -13,5 +13,6 @@ class Autocomplete:
     self.autocomplete = AutoComplete(words=words)
  
   def search(self,_word):
-      return self.autocomplete.search(word=_word, max_cost=3, size=3)[0]
+      if(len(self.autocomplete.search(word=_word, max_cost=3, size=3))>0):
+          return self.autocomplete.search(word=_word, max_cost=3, size=3)[0]
 

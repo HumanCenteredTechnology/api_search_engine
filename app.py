@@ -11,19 +11,19 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 autocomplete=Autocomplete()
 
-@app.route('/', methods=["GET"])
+@app.route('/api/', methods=["GET"])
 def template_search():
     return send_from_directory('templates', 'home.html')
 
 
-@app.route("/", methods=["POST"])
+@app.route("/api/", methods=["POST"])
 def search_api():
    _input = request.form.get('search-input')
    _results = search(_input)
    return jsonify(_results)
 
 
-@app.route("/not_json_add_article", methods=["POST"])
+@app.route("/api/not_json_add_article", methods=["POST"])
 def add_article_template():
    _title = request.form.get('title')
    _abstract = request.form.get('abstract')
@@ -32,7 +32,7 @@ def add_article_template():
    left_side,right_side=search_annotations_on_taxonomy(_annotations)
    return render_template('add_article_results.html',results={"founded_elements":left_side,"not_founded_elements":right_side})
 
-@app.route("/add_article", methods=["POST"])
+@app.route("/api/add_article", methods=["POST"])
 def add_article_json():
    _title = request.form.get('title')
    _abstract = request.form.get('abstract')
@@ -41,11 +41,11 @@ def add_article_json():
    left_side,right_side=search_annotations_on_taxonomy(_annotations)
    return jsonify({"founded_elements":left_side,"not_founded_elements":right_side})
 
-@app.route("/add_article", methods=["GET"])
+@app.route("/api/add_article", methods=["GET"])
 def add_article_form_template():
     return render_template('add_article.html')
 
-@app.route("/not_json", methods=["POST"])
+@app.route("/api/not_json", methods=["POST"])
 def search_api_template():
    _input = request.form.get('search-input')
    _results = search(_input)
@@ -87,7 +87,7 @@ def unrelated_use_cases(_use_cases,_category):
         _problems[_problem]=list(_problems[_problem])
     return _problems
         
-@app.route("/search", methods=["GET"])
+@app.route("/api/search", methods=["GET"])
 def suggestion():
     word=request.args['word']
     return jsonify({"word":autocomplete.search(word)})
@@ -170,12 +170,12 @@ def tagme_api(_input):
 
 
 
-@app.route('/js/<path:path>')
+@app.route('/api/js/<path:path>')
 def send_js(path):
     return send_from_directory('js', path)
 
 
-@app.route('/css/<path:path>')
+@app.route('/api/css/<path:path>')
 def send_css(path):
     return send_from_directory('css', path)
 
