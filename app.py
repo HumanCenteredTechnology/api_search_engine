@@ -118,7 +118,7 @@ def prepare_result_list(_use_cases_related):
     for _use_case in _use_cases_related:
         _articles = _use_case[3]
         for _article in _articles:
-            result_list.append(_article)
+            result_list.append(_article[0])
     return result_list
 
 
