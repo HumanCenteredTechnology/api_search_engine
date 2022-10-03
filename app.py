@@ -25,6 +25,14 @@ def search_api():
    return jsonify(_results)
 
 
+@app.route("/article/<article_id>", methods=["GET"])
+def get_article_by_id(article_id):
+    con = sqlite3.connect('taxonomy.db')
+    df = pd.read_sql_query(
+        f"SELECT * FROM articles WHERE id={article_id} ", con)
+    con.close()
+    return df.iloc[0].to_json()
+
 @app.route("/not_json_add_article", methods=["POST"])
 def add_article_template():
    _title = request.form.get('title')
