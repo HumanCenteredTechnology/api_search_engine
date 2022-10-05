@@ -1,0 +1,472 @@
+name,category,link
+Process Optimization,Problems,https://en.wikipedia.org/wiki/Process Optimization
+Equipment and Process Efficiency Improvement ,Problems,https://en.wikipedia.org/wiki/Equipment
+Real-time Production and Process Monitoring Analysis and Supervision ,Problems,https://en.wikipedia.org/wiki/Real-time
+Predictive Maintenance ,Problems,https://en.wikipedia.org/wiki/Predictive Maintenance
+Production Planning and Scheduling ,Problems,https://en.wikipedia.org/wiki/Production Planning
+Fully Automated Production Facilities ,Problems,https://en.wikipedia.org/wiki/Fully Automated
+Legacy Systems Modernization and Retrofitting ,Problems,https://en.wikipedia.org/wiki/Legacy Systems
+Commissioning Process ,Problems,https://en.wikipedia.org/wiki/Commissioning
+Worker Safety Improvement and Accident Prevention ,Problems,https://en.wikipedia.org/wiki/Worker Safety
+Smart PPE ,Problems,https://en.wikipedia.org/wiki/Smart
+Worker Attention and Mental State Monitoring ,Problems,https://en.wikipedia.org/wiki/Worker
+People Counting Analysis and Crowd Detection ,Problems,https://en.wikipedia.org/wiki/People Counting
+Remote Operation ,Problems,https://en.wikipedia.org/wiki/Remote Operation
+Supply Chain ,Problems,https://en.wikipedia.org/wiki/Supply Chain
+Vertical Integration ,Problems,https://en.wikipedia.org/wiki/Vertical Integration
+Horizontal Integration ,Problems,https://en.wikipedia.org/wiki/Horizontal Integration
+Production on Demand ,Problems,https://en.wikipedia.org/wiki/Production
+Smart Warehouse and Inventory Management ,Problems,https://en.wikipedia.org/wiki/Smart
+Intralogistics 4.0 - Material Flow Control ,Problems,https://en.wikipedia.org/wiki/Material Flow
+Supply Chain Transparency and Reliability Improvement ,Problems,https://en.wikipedia.org/wiki/Supply Chain
+Production Output and Demand Forecasting ,Problems,https://en.wikipedia.org/wiki/Production
+Mass Customization ,Problems,https://en.wikipedia.org/wiki/Mass Customization
+Quality Assurance ,Problems,https://en.wikipedia.org/wiki/Quality Assurance
+Sustainable Industrial Environment ,Problems,https://en.wikipedia.org/wiki/Sustainable
+Employee Training and Assistance in Worker’s Tasks ,Problems,https://en.wikipedia.org/wiki/Employee Training
+Knowledge Management ,Problems,https://en.wikipedia.org/wiki/Knowledge Management
+Product Servitization ,Problems,https://en.wikipedia.org/wiki/Product
+Usability Improvement ,Problems,https://en.wikipedia.org/wiki/Usability
+Smart Products ,Problems,https://en.wikipedia.org/wiki/Smart Products
+Cost and Number of Parts or Components Reduction ,Problems,https://en.wikipedia.org/wiki/Cost
+After-Sales Service ,Problems,https://en.wikipedia.org/wiki/After-Sales
+Big Data,Technology,https://en.wikipedia.org/wiki/Big Data
+Big Data Frameworks,Technology,https://en.wikipedia.org/wiki/Big Data
+Apache Hadoop,Technology,https://en.wikipedia.org/wiki/Apache Hadoop
+Data Sources/Ingestion,Technology,https://en.wikipedia.org/wiki/Data
+Streaming and Messaging,Technology,https://en.wikipedia.org/wiki/Streaming
+Apache Kafka,Technology,https://en.wikipedia.org/wiki/Apache Kafka
+Apache Flume,Technology,https://en.wikipedia.org/wiki/Apache Flume
+Orchestration and Pipelines,Technology,https://en.wikipedia.org/wiki/Orchestration
+Talend Data Fabric,Technology,https://en.wikipedia.org/wiki/Talend
+Query/Data Flow,Technology,https://en.wikipedia.org/wiki/Query
+Apache Drill,Technology,https://en.wikipedia.org/wiki/Apache Drill
+Presto,Technology,https://en.wikipedia.org/wiki/Presto
+Impala,Technology,https://en.wikipedia.org/wiki/Impala
+Data Storage,Technology,https://en.wikipedia.org/wiki/Data Storage
+Databases,Technology,https://en.wikipedia.org/wiki/Databases
+Relational Databases,Technology,https://en.wikipedia.org/wiki/Relational Databases
+Microsoft SQL Server,Technology,https://en.wikipedia.org/wiki/Microsoft SQL Server
+MySQL DB,Technology,https://en.wikipedia.org/wiki/MySQL
+MariaDB,Technology,https://en.wikipedia.org/wiki/MariaDB
+PostgreSQL,Technology,https://en.wikipedia.org/wiki/PostgreSQL
+SQLite3,Technology,https://en.wikipedia.org/wiki/SQLite3
+NewSQL DB,Technology,https://en.wikipedia.org/wiki/NewSQL
+CrateDB,Technology, 
+NoSQL Databases,Technology,https://en.wikipedia.org/wiki/NoSQL
+Document databases,Technology,https://en.wikipedia.org/wiki/Document
+MongoDB,Technology,https://en.wikipedia.org/wiki/MongoDB
+CouchDB,Technology,https://en.wikipedia.org/wiki/CouchDB
+Time Series Databases (TSDBs),Technology,https://en.wikipedia.org/wiki/Time Series
+Apache Druid,Technology,https://en.wikipedia.org/wiki/Apache
+influxDB,Technology, 
+Column-Oriented Databases,Technology,https://en.wikipedia.org/wiki/Column-Oriented Databases
+Apache Cassandra,Technology,https://en.wikipedia.org/wiki/Apache Cassandra
+Data Warehouses,Technology,https://en.wikipedia.org/wiki/Data Warehouses
+Apache Hive,Technology,https://en.wikipedia.org/wiki/Apache Hive
+Data Analytics,Technology,https://en.wikipedia.org/wiki/Data Analytics
+Unified Data Analytics Engines,Technology,https://en.wikipedia.org/wiki/Unified
+Apache Spark,Technology,https://en.wikipedia.org/wiki/Apache Spark
+Unified stream-processing and batch-processing frameworks,Technology,https://en.wikipedia.org/wiki/Unified
+Apache Flink,Technology,https://en.wikipedia.org/wiki/Apache Flink
+Apache Storm,Technology,https://en.wikipedia.org/wiki/Apache Storm
+Business Intelligence Tools,Technology,https://en.wikipedia.org/wiki/Business Intelligence Tools
+Microsoft PowerBI,Technology,https://en.wikipedia.org/wiki/Microsoft
+IBM SPSS Statistics,Technology,https://en.wikipedia.org/wiki/IBM SPSS Statistics
+QlikView/Qlik Sense,Technology,https://en.wikipedia.org/wiki/QlikView
+Data Visualization Tools and Platforms,Technology,https://en.wikipedia.org/wiki/Data Visualization
+Bokeh,Technology,https://en.wikipedia.org/wiki/Bokeh
+Wiz,Technology,https://en.wikipedia.org/wiki/Wiz
+Tableau,Technology,https://en.wikipedia.org/wiki/Tableau
+Freeboard dashboard,Technology,https://en.wikipedia.org/wiki/Freeboard
+Ubidots platform,Technology,https://en.wikipedia.org/wiki/platform
+Kibana,Technology,https://en.wikipedia.org/wiki/Kibana
+Grafana,Technology, 
+Logging and Monitoring,Technology,https://en.wikipedia.org/wiki/Logging
+ElasticSearch Logstash,Technology,https://en.wikipedia.org/wiki/ElasticSearch
+Spreadsheet Applications,Technology,https://en.wikipedia.org/wiki/Spreadsheet
+PowerPivot,Technology,https://en.wikipedia.org/wiki/PowerPivot
+Data Mining,Technology,https://en.wikipedia.org/wiki/Data Mining
+Python,Technology,https://en.wikipedia.org/wiki/Python
+MATLAB,Technology,https://en.wikipedia.org/wiki/MATLAB
+R Programming,Technology,https://en.wikipedia.org/wiki/R Programming
+Process Mining,Technology,https://en.wikipedia.org/wiki/Process Mining
+AI,Technology,https://en.wikipedia.org/wiki/AI
+Machine Learning,Technology,https://en.wikipedia.org/wiki/Machine Learning
+Supervised Learning,Technology,https://en.wikipedia.org/wiki/Supervised Learning
+Regression,Technology,https://en.wikipedia.org/wiki/Regression
+Linear Regression,Technology,https://en.wikipedia.org/wiki/Linear Regression
+Polynomial Regression,Technology,https://en.wikipedia.org/wiki/Polynomial Regression
+Support Vector Regression (SVR),Technology,https://en.wikipedia.org/wiki/Support Vector Regression
+Gaussian process regression (GPR),Technology,https://en.wikipedia.org/wiki/Gaussian process
+Decision Tree Regression,Technology,https://en.wikipedia.org/wiki/Decision Tree
+Lasso Regression,Technology,https://en.wikipedia.org/wiki/Lasso Regression
+Loess,Technology,https://en.wikipedia.org/wiki/Loess
+Bayesian Linear Regression (BLR),Technology,https://en.wikipedia.org/wiki/Bayesian Linear Regression
+Classification,Technology,https://en.wikipedia.org/wiki/Classification
+K Nearest Neighbour (KNN)/Case-Based Reasoning (CBR),Technology,https://en.wikipedia.org/wiki/K Nearest Neighbour
+Logistic Regression,Technology,https://en.wikipedia.org/wiki/Logistic Regression
+Decision Tree Classifier (DTC),Technology,https://en.wikipedia.org/wiki/Decision Tree
+Support Vector Machine (SVM),Technology,https://en.wikipedia.org/wiki/Support Vector Machine
+Gaussian Naive Bayes Classifier,Technology,https://en.wikipedia.org/wiki/Gaussian Naive Bayes
+Gaussian Processes Classifier,Technology,https://en.wikipedia.org/wiki/Gaussian Processes
+Ensemble Methods,Technology,https://en.wikipedia.org/wiki/Ensemble Methods
+Bagging,Technology,https://en.wikipedia.org/wiki/Bagging
+Random Forest,Technology,https://en.wikipedia.org/wiki/Random Forest
+Bagged Decision Trees,Technology,https://en.wikipedia.org/wiki/Bagged
+Decision Jungle (DJ),Technology,https://en.wikipedia.org/wiki/Decision
+Boosting,Technology,https://en.wikipedia.org/wiki/Boosting
+AdaBoost,Technology,https://en.wikipedia.org/wiki/AdaBoost
+XGBoost,Technology,https://en.wikipedia.org/wiki/XGBoost
+Gradient Boosted Decision Trees,Technology,https://en.wikipedia.org/wiki/Gradient Boosted Decision Trees
+Extreme Learning,Technology,https://en.wikipedia.org/wiki/Extreme
+Unsupervised Learning,Technology,https://en.wikipedia.org/wiki/Unsupervised Learning
+Data Clustering,Technology,https://en.wikipedia.org/wiki/Data Clustering
+K-means clustering,Technology,https://en.wikipedia.org/wiki/K-means clustering
+Bisecting K-Means,Technology,https://en.wikipedia.org/wiki/Bisecting
+Fuzzy C-means clustering,Technology,https://en.wikipedia.org/wiki/Fuzzy C-means
+Gaussian Mixture Models,Technology,https://en.wikipedia.org/wiki/Gaussian Mixture Models
+Hidden Markov Model (HMM),Technology,https://en.wikipedia.org/wiki/Hidden Markov Model
+Dimensionality Reduction,Technology,https://en.wikipedia.org/wiki/Dimensionality Reduction
+Principal Component Analysis (PCA),Technology,https://en.wikipedia.org/wiki/Principal Component Analysis
+Oversampling PCA,Technology,https://en.wikipedia.org/wiki/Oversampling
+Piecewise Aggregate Approximation (PAA),Technology,https://en.wikipedia.org/wiki/Piecewise
+Adaptive Piecewise Constant Approximation (APCA),Technology,https://en.wikipedia.org/wiki/Adaptive
+Quadratic Discriminant Analysis (QDA),Technology,https://en.wikipedia.org/wiki/Quadratic Discriminant Analysis
+Forward Selection Component Analysis (FSCA),Technology,https://en.wikipedia.org/wiki/Forward Selection
+Anomaly Detection,Technology,https://en.wikipedia.org/wiki/Anomaly Detection
+One-class SVM (OCSVM),Technology,https://en.wikipedia.org/wiki/SVM
+Isolation Forest,Technology,https://en.wikipedia.org/wiki/Isolation
+Local Outlier Factor (LOF),Technology,https://en.wikipedia.org/wiki/Local Outlier Factor
+Deep Learning,Technology,https://en.wikipedia.org/wiki/Deep Learning
+Discriminative (Supervised),Technology,https://en.wikipedia.org/wiki/Discriminative
+Deep Neural Networks (DNN),Technology,https://en.wikipedia.org/wiki/Deep Neural Networks
+Convolutional Neural Network (CNN),Technology,https://en.wikipedia.org/wiki/Convolutional Neural Network
+U-Net,Technology, 
+PointNet,Technology, 
+AlexNet,Technology, 
+VGGNet,Technology, 
+GoogleNet / Inception,Technology,https://en.wikipedia.org/wiki/GoogleNet
+ResNets,Technology, 
+SqueezeNet,Technology, 
+Yolo v3,Technology,https://en.wikipedia.org/wiki/Yolo
+Region-based Convolutional Neural Network (R-CNN),Technology,https://en.wikipedia.org/wiki/Convolutional Neural Network
+DenseNet,Technology, 
+1 Y-Net,Technology,https://en.wikipedia.org/wiki/Y-Net
+Recurrent Neural Network (RNN),Technology,https://en.wikipedia.org/wiki/Recurrent Neural Network
+Long short-term memory (LSTM),Technology,https://en.wikipedia.org/wiki/Long short-term memory
+Gated Recurrent Unit (GRU),Technology,https://en.wikipedia.org/wiki/Gated
+Binary Neural Networks (BNN),Technology,https://en.wikipedia.org/wiki/Binary
+Hybrid Binary Neural Network (HBN),Technology,https://en.wikipedia.org/wiki/Hybrid
+Generative (Unsupervised),Technology,https://en.wikipedia.org/wiki/Generative
+Generative Adversarial Network (GAN),Technology,https://en.wikipedia.org/wiki/Generative
+Self-Organizing Map (SOM)/Kohonen Map,Technology,https://en.wikipedia.org/wiki/Self-Organizing Map
+Autoencoder (AE),Technology,https://en.wikipedia.org/wiki/Autoencoder
+Denoising AE (DAE),Technology,https://en.wikipedia.org/wiki/Denoising
+Hybrid Binary AutoEncoder (HBAE),Technology,https://en.wikipedia.org/wiki/Hybrid
+Feed Forward Autoencoder (FF-AE),Technology,https://en.wikipedia.org/wiki/Feed Forward
+Siamese Autoencoder,Technology,https://en.wikipedia.org/wiki/Siamese
+Convolutional Siamese Autoencoder (CNN-SAE),Technology,https://en.wikipedia.org/wiki/Siamese
+Convolutional Autoencoder (CAE),Technology,https://en.wikipedia.org/wiki/Autoencoder
+Sparse Autoencoder,Technology,https://en.wikipedia.org/wiki/Sparse
+Deep Belief Network (DBN),Technology,https://en.wikipedia.org/wiki/Deep Belief Network
+Restricted Boltzmann Machine (RBM),Technology,https://en.wikipedia.org/wiki/Restricted Boltzmann Machine
+Hybrid,Technology,https://en.wikipedia.org/wiki/Hybrid
+Several Discriminative Models,Technology,https://en.wikipedia.org/wiki/Discriminative
+CNN+LSTM,Technology,https://en.wikipedia.org/wiki/CNN
+CNN+GRU,Technology,https://en.wikipedia.org/wiki/CNN
+Transfer Learning,Technology,https://en.wikipedia.org/wiki/Transfer Learning
+Reinforcement Learning,Technology,https://en.wikipedia.org/wiki/Reinforcement Learning
+Model-Free RL,Technology,https://en.wikipedia.org/wiki/RL
+Policy Optimization,Technology,https://en.wikipedia.org/wiki/Policy
+State-Action-Reward-State-Action (SARSA),Technology,https://en.wikipedia.org/wiki/State-Action-Reward-State-Action
+Learning Automata,Technology,https://en.wikipedia.org/wiki/Learning Automata
+Q-learning,Technology,https://en.wikipedia.org/wiki/Q-learning
+Inverse Reinforcement Learning (IRL),Technology,https://en.wikipedia.org/wiki/Inverse Reinforcement Learning
+Deep Reinforcement Learning,Technology,https://en.wikipedia.org/wiki/Deep
+Deep Q Networks (DQN),Technology,https://en.wikipedia.org/wiki/Deep
+Multi-Agent Deep Deterministic Policy Gradient (MADDPG),Technology,https://en.wikipedia.org/wiki/Multi-Agent
+Semi-Supervised Learning,Technology,https://en.wikipedia.org/wiki/Semi-Supervised Learning
+Active Learning,Technology,https://en.wikipedia.org/wiki/Active Learning
+Federated learning,Technology,https://en.wikipedia.org/wiki/Federated
+Computer Vision,Technology,https://en.wikipedia.org/wiki/Computer Vision
+Open CV,Technology,https://en.wikipedia.org/wiki/Open CV
+Tesseract OCR Engine,Technology,https://en.wikipedia.org/wiki/Tesseract OCR
+Natural Language Processing Natural Language Generation,Technology,https://en.wikipedia.org/wiki/Natural Language Processing
+Ιntelligent Agents and Multiagent Systems,Technology,https://en.wikipedia.org/wiki/Agents
+AOS JACK,Technology,https://en.wikipedia.org/wiki/AOS
+JADE (Java AgentDevelopment Framework),Technology,https://en.wikipedia.org/wiki/JADE
+Soft Computing,Technology,https://en.wikipedia.org/wiki/Soft Computing
+Fuzzy Set Theory,Technology,https://en.wikipedia.org/wiki/Fuzzy Set
+Adaptive-Neuro-Fuzzy Inference System,Technology,https://en.wikipedia.org/wiki/Adaptive-Neuro-Fuzzy Inference System
+Fuzzy Formal Concept Analysis (FCA),Technology,https://en.wikipedia.org/wiki/Fuzzy
+Fuzzy Control,Technology,https://en.wikipedia.org/wiki/Fuzzy Control
+Fuzzy Cognitive Maps,Technology,https://en.wikipedia.org/wiki/Fuzzy
+Neurocomputing,Technology,https://en.wikipedia.org/wiki/Neurocomputing
+Artificial Neural Networks (ANN),Technology,https://en.wikipedia.org/wiki/Artificial Neural Networks
+Time Delay Neural Network (TDNN),Technology,https://en.wikipedia.org/wiki/Time Delay Neural Network
+Optimization Techniques,Technology,https://en.wikipedia.org/wiki/Optimization
+Meta-heuristic approaches,Technology,https://en.wikipedia.org/wiki/Meta-heuristic
+Evolutionary Computation,Technology,https://en.wikipedia.org/wiki/Evolutionary Computation
+Genetic Algorithms,Technology,https://en.wikipedia.org/wiki/Genetic Algorithms
+Differential Evolution (DE),Technology,https://en.wikipedia.org/wiki/Differential Evolution
+Trajectory-based Algorithms,Technology,https://en.wikipedia.org/wiki/Algorithms
+Simulated annealing,Technology,https://en.wikipedia.org/wiki/Simulated annealing
+Nature Inspired Algorithms,Technology,https://en.wikipedia.org/wiki/Nature
+Fish Swarm Optimization Algorithm,Technology,https://en.wikipedia.org/wiki/Fish
+Water Cycle Algorithm (WCA),Technology,https://en.wikipedia.org/wiki/Water Cycle
+Grey Wolf Optimizer (GWO),Technology,https://en.wikipedia.org/wiki/Grey Wolf Optimizer
+Particle Swarm Optimization (PSO),Technology,https://en.wikipedia.org/wiki/Particle Swarm Optimization
+Artificial Bee Colony (ABC),Technology,https://en.wikipedia.org/wiki/Artificial Bee Colony
+Simplified Swarm Optimization (SSO),Technology,https://en.wikipedia.org/wiki/Simplified
+Quasi-Newton Methods (QNMs),Technology,https://en.wikipedia.org/wiki/Quasi-Newton Methods
+L-BFGSB,Technology, 
+Probabilistic Reasoning (PR),Technology,https://en.wikipedia.org/wiki/Probabilistic Reasoning
+Bayesian Networks (BN),Technology,https://en.wikipedia.org/wiki/Bayesian Networks
+Cloud Computing,Technology,https://en.wikipedia.org/wiki/Cloud Computing
+Infrastructure as a Service (IaaS),Technology,https://en.wikipedia.org/wiki/Infrastructure as a Service
+Cloud Data Storage and Computing,Technology,https://en.wikipedia.org/wiki/Cloud
+Firebase Realtime Database,Technology,https://en.wikipedia.org/wiki/Firebase
+AWS S3,Technology,https://en.wikipedia.org/wiki/AWS S3
+Google Cloud Storage,Technology,https://en.wikipedia.org/wiki/Google Cloud Storage
+Microsoft Azure Storage,Technology,https://en.wikipedia.org/wiki/Microsoft Azure
+AWS RDS,Technology,https://en.wikipedia.org/wiki/AWS
+AWS EC2,Technology,https://en.wikipedia.org/wiki/AWS EC2
+Virtual Machines,Technology,https://en.wikipedia.org/wiki/Virtual Machines
+Platform as a Service (PaaS),Technology,https://en.wikipedia.org/wiki/Platform  as a Service
+Device Management,Technology,https://en.wikipedia.org/wiki/Device Management
+Zerynth Device Manager,Technology,https://en.wikipedia.org/wiki/Device Manager
+Aws IoT Device Management,Technology,https://en.wikipedia.org/wiki/Aws
+Azure IOT Hub,Technology,https://en.wikipedia.org/wiki/Azure
+WinCC OA IOT OPA,Technology,https://en.wikipedia.org/wiki/WinCC
+Live Objects,Technology,https://en.wikipedia.org/wiki/Live Objects
+Operating System,Technology,https://en.wikipedia.org/wiki/Operating System
+Siemens MindSphere,Technology,https://en.wikipedia.org/wiki/Siemens
+Software as a Service (SaaS),Technology,https://en.wikipedia.org/wiki/Software
+Media Streaming Software Platforms,Technology,https://en.wikipedia.org/wiki/Media Streaming
+Wowza,Technology, 
+Website Building,Technology,https://en.wikipedia.org/wiki/Website
+Hostinger,Technology, 
+IoT Analytics Software and Platforms,Technology,https://en.wikipedia.org/wiki/IoT
+ThingSpeak,Technology,https://en.wikipedia.org/wiki/ThingSpeak
+ThingWorx,Technology, 
+AllThingsTalk,Technology, 
+Infrastructure as Code (IaC),Technology,https://en.wikipedia.org/wiki/Infrastructure as Code
+Provisioning Tools,Technology,https://en.wikipedia.org/wiki/Provisioning
+Terraform,Technology,https://en.wikipedia.org/wiki/Terraform
+Container Technology (Container as a Service),Technology,https://en.wikipedia.org/wiki/Container
+Containerization Platform,Technology,https://en.wikipedia.org/wiki/Containerization
+Docker,Technology,https://en.wikipedia.org/wiki/Docker
+Container Orchestration,Technology,https://en.wikipedia.org/wiki/Container
+Kubernetes,Technology,https://en.wikipedia.org/wiki/Kubernetes
+Backend as a service (BaaS),Technology,https://en.wikipedia.org/wiki/Backend as a service
+Firebase Cloud Messaging,Technology,https://en.wikipedia.org/wiki/Firebase
+Serverless Programming,Technology,https://en.wikipedia.org/wiki/Programming
+AWS Lambda functions,Technology,https://en.wikipedia.org/wiki/AWS
+Azure functions,Technology,https://en.wikipedia.org/wiki/Azure
+Apache Openwhisk,Technology,https://en.wikipedia.org/wiki/Apache
+Edge Computing,Technology,https://en.wikipedia.org/wiki/Edge Computing
+AWS green grass,Technology,https://en.wikipedia.org/wiki/AWS
+Azure Edge IoT,Technology,https://en.wikipedia.org/wiki/Azure
+Custom solutions based on docker swarm,Technology,https://en.wikipedia.org/wiki/Custom
+Multi-access edge computing (MEC),Technology,https://en.wikipedia.org/wiki/edge computing
+AWS Wavelength,Technology,https://en.wikipedia.org/wiki/AWS
+HARTING MICA WSN 0,Technology,https://en.wikipedia.org/wiki/HARTING
+Fog Computing,Technology,https://en.wikipedia.org/wiki/Fog Computing
+Transport Layer (Uploading pre-processed data and secured data to cloud),Technology,https://en.wikipedia.org/wiki/Transport Layer
+Security Layer (Encryption/Decryption privacy and integrity measures),Technology,https://en.wikipedia.org/wiki/Security
+Temporary Storage Layer (Data distribution replication and de-duplication),Technology,https://en.wikipedia.org/wiki/Temporary
+Processing Layer (Data analysis Data Filtering Machine Learning; Rules Engines; Cognition),Technology,https://en.wikipedia.org/wiki/Processing
+Monitoring Layer (Monitoring of power resource activities service and response),Technology,https://en.wikipedia.org/wiki/Monitoring
+Physical and Virtualization Layer (Network of virtual sensors and Things),Technology,https://en.wikipedia.org/wiki/Physical
+Hypervisor Technology for embedded systems,Technology,https://en.wikipedia.org/wiki/Hypervisor
+PikeOS,Technology,https://en.wikipedia.org/wiki/PikeOS
+ACRN,Technology, 
+Xen,Technology,https://en.wikipedia.org/wiki/Xen
+IoT and IoE,Technology,https://en.wikipedia.org/wiki/IoT
+Industrial IoT,Technology,https://en.wikipedia.org/wiki/Industrial
+Industrial Communication Protocols,Technology,https://en.wikipedia.org/wiki/Industrial
+Point-to-point communication Protocols (IO-Link),Technology,https://en.wikipedia.org/wiki/Point-to-point
+Ethernet Protocols (EtherNet/IP;ProfiNET;Modbus;OPC;OPC UA; EtherCAT;MTConnect;Beckhoff ADS protocol),Technology,https://en.wikipedia.org/wiki/Ethernet
+Fieldbus Protocols (Profibus DP;Modbus RTU;GSK-Link communication protocol),Technology,https://en.wikipedia.org/wiki/Fieldbus
+Wireless Protocols (WirelessHART;WIA-FA;WIA-PA;IO-Link Wireless;ISA 100.11a),Technology,https://en.wikipedia.org/wiki/Protocols
+Industrial (IoT) Gateways and Data Acquisition Devices,Technology,https://en.wikipedia.org/wiki/Industrial
+Software Data Adapters,Technology,https://en.wikipedia.org/wiki/Software
+Apache PLC4X,Technology,https://en.wikipedia.org/wiki/Apache
+Eclipse Hono,Technology,https://en.wikipedia.org/wiki/Eclipse
+Physical Devices and Controllers,Technology,https://en.wikipedia.org/wiki/Physical
+Embedded Computing,Technology,https://en.wikipedia.org/wiki/Embedded Computing
+Microcontroller programming and RTOS,Technology,https://en.wikipedia.org/wiki/Microcontroller
+Arduino,Technology,https://en.wikipedia.org/wiki/Arduino
+STM32,Technology,https://en.wikipedia.org/wiki/STM32
+ESP32,Technology, 
+FPGA,Technology,https://en.wikipedia.org/wiki/FPGA
+MSP430 microcontroller,Technology,https://en.wikipedia.org/wiki/MSP430
+Microprocessor programming and embedded Linux,Technology,https://en.wikipedia.org/wiki/Microprocessor
+RaspberryPi,Technology,https://en.wikipedia.org/wiki/RaspberryPi
+LattePanda,Technology, 
+Beagle Bone Blue (BBBlue),Technology,https://en.wikipedia.org/wiki/Beagle
+Other SBC,Technology,https://en.wikipedia.org/wiki/SBC
+Sensors (hardware),Technology,https://en.wikipedia.org/wiki/Sensors
+Kinect Sensor,Technology,https://en.wikipedia.org/wiki/Kinect
+Leap Motion,Technology,https://en.wikipedia.org/wiki/Leap Motion
+RealSense camera sensor,Technology,https://en.wikipedia.org/wiki/camera sensor
+Ultrasonic sensors,Technology,https://en.wikipedia.org/wiki/Ultrasonic
+SmartMat Digital Scale,Technology,https://en.wikipedia.org/wiki/Digital Scale
+Signal Processing,Technology,https://en.wikipedia.org/wiki/Signal Processing
+Software Defined Radio (SDR),Technology,https://en.wikipedia.org/wiki/Software Defined Radio
+Blind Source Separation (BSS),Technology,https://en.wikipedia.org/wiki/Blind Source Separation
+Connectivity,Technology,https://en.wikipedia.org/wiki/Connectivity
+Radio Communication Technologies,Technology,https://en.wikipedia.org/wiki/Radio Communication
+Cellular Communications,Technology,https://en.wikipedia.org/wiki/Cellular Communications
+LTE/GSM/4G/5G,Technology,https://en.wikipedia.org/wiki/LTE
+Multimedia Broadcast Multicast Service (eMBMS),Technology,https://en.wikipedia.org/wiki/Multimedia Broadcast Multicast Service
+Group Communication System Enablers (GCSE),Technology,https://en.wikipedia.org/wiki/Group Communication System
+Wi-Fi WLAN (wireless local area network),Technology,https://en.wikipedia.org/wiki/Wi-Fi
+Short-range wireless,Technology,https://en.wikipedia.org/wiki/Short-range
+RFID/NFC,Technology,https://en.wikipedia.org/wiki/RFID
+Bluetooth/Bluetooth Low Energy,Technology,https://en.wikipedia.org/wiki/Bluetooth Low Energy
+ZigBee,Technology,https://en.wikipedia.org/wiki/ZigBee
+6LoWPAN,Technology,https://en.wikipedia.org/wiki/6LoWPAN
+Ultra-wideband (UWB),Technology,https://en.wikipedia.org/wiki/Ultra-wideband
+Long-range wireless,Technology,https://en.wikipedia.org/wiki/Long-range
+LPWAN (Low power wide area network),Technology,https://en.wikipedia.org/wiki/LPWAN
+LoRaWan,Technology,https://en.wikipedia.org/wiki/LoRaWan
+MIoTy,Technology, 
+LTE-M,Technology, 
+NB-IoT,Technology, 
+Optical Communication Technologies,Technology,https://en.wikipedia.org/wiki/Optical Communication
+IoT Messaging Protocols,Technology,https://en.wikipedia.org/wiki/IoT
+Message Queuing Telemetry Transport (MQTT),Technology,https://en.wikipedia.org/wiki/Message Queuing Telemetry Transport
+Advanced Message Queuing Protocol (AMQP),Technology,https://en.wikipedia.org/wiki/Advanced Message Queuing Protocol
+Application Programming Interfaces and Programming Tools,Technology,https://en.wikipedia.org/wiki/Application Programming Interfaces
+REST API and Webhook,Technology,https://en.wikipedia.org/wiki/REST API
+FIWARE NGSI API,Technology,https://en.wikipedia.org/wiki/FIWARE
+Node-Red,Technology,https://en.wikipedia.org/wiki/Node-Red
+Real-time Web Frameworks,Technology,https://en.wikipedia.org/wiki/Real-time Web
+Socket.io,Technology,https://en.wikipedia.org/wiki/Socket.io
+IoE (Internet of Everything),Technology,https://en.wikipedia.org/wiki/IoE
+Digital Twins,Technology,https://en.wikipedia.org/wiki/Digital Twins
+Computer-aided design (CAD) Software,Technology,https://en.wikipedia.org/wiki/Computer-aided design
+Dassault Catia CAD suite,Technology,https://en.wikipedia.org/wiki/Dassault
+Dassault Systèmes’ SolidWorks,Technology,https://en.wikipedia.org/wiki/Dassault Systèmes
+Siemens NX,Technology,https://en.wikipedia.org/wiki/Siemens NX
+Finite Element Analysis (FEA) Software,Technology,https://en.wikipedia.org/wiki/Finite Element Analysis
+Xcos,Technology,https://en.wikipedia.org/wiki/Xcos
+CREO Simulate,Technology,https://en.wikipedia.org/wiki/CREO
+Simulation software,Technology,https://en.wikipedia.org/wiki/Simulation software
+SimulationX,Technology,https://en.wikipedia.org/wiki/SimulationX
+Xcelgo’s Experior,Technology, 
+Tecnomatix Plant Simulation,Technology,https://en.wikipedia.org/wiki/Tecnomatix
+FlexSim,Technology,https://en.wikipedia.org/wiki/FlexSim
+SimPy,Technology,https://en.wikipedia.org/wiki/SimPy
+SIMIT simulation platform,Technology,https://en.wikipedia.org/wiki/SIMIT
+Emulate3D,Technology, 
+FastSuite,Technology, 
+CIROS Studio,Technology,https://en.wikipedia.org/wiki/Studio
+AutoMod,Technology, 
+1 Anylogic Simulation,Technology,https://en.wikipedia.org/wiki/Anylogic
+1 RF :: Suite,Technology,https://en.wikipedia.org/wiki/RF
+1 S7-PLCSIM Advanced,Technology,https://en.wikipedia.org/wiki/Advanced
+1 Automation Studio,Technology,https://en.wikipedia.org/wiki/Automation Studio
+1 OpenSimulator,Technology,https://en.wikipedia.org/wiki/OpenSimulator
+1 Dassault Dymola,Technology,https://en.wikipedia.org/wiki/Dassault
+1 DynSOx,Technology, 
+1 ClearView Ammonia,Technology,https://en.wikipedia.org/wiki/ClearView
+1 COMSOL,Technology,https://en.wikipedia.org/wiki/COMSOL
+20. MSC ADAMS,Technology,https://en.wikipedia.org/wiki/MSC ADAMS
+2 Ansys,Technology,https://en.wikipedia.org/wiki/Ansys
+DTs management and Orchestration Framework,Technology,https://en.wikipedia.org/wiki/DTs
+Eclipse Ditto,Technology,https://en.wikipedia.org/wiki/Eclipse
+Digital Twin Data Modelling,Technology,https://en.wikipedia.org/wiki/Digital
+AutomationML,Technology,https://en.wikipedia.org/wiki/AutomationML
+Virtual Process Controllers (VPC),Technology,https://en.wikipedia.org/wiki/Virtual
+Industrial Robotics,Technology,https://en.wikipedia.org/wiki/Industrial Robotics
+Offline Robot Programming and Simulation,Technology,https://en.wikipedia.org/wiki/Offline
+ABB RobotStudio,Technology,https://en.wikipedia.org/wiki/ABB
+Roboguide,Technology, 
+Polyscope software,Technology,https://en.wikipedia.org/wiki/software
+KUKASim,Technology, 
+Delmia V5 Robotics,Technology,https://en.wikipedia.org/wiki/Delmia
+URSim,Technology, 
+ARIA programming package,Technology,https://en.wikipedia.org/wiki/ARIA
+Middleware,Technology,https://en.wikipedia.org/wiki/Middleware
+ROS (Robot Operating System),Technology,https://en.wikipedia.org/wiki/ROS
+Augmented Reality (AR) and Virtual Reality (VR),Technology,https://en.wikipedia.org/wiki/Augmented Reality
+Virtual Reality,Technology,https://en.wikipedia.org/wiki/Virtual Reality
+VR glasses,Technology,https://en.wikipedia.org/wiki/VR glasses
+Oculus Rift HMD,Technology,https://en.wikipedia.org/wiki/Oculus Rift
+HTC Vive,Technology,https://en.wikipedia.org/wiki/HTC Vive
+Augmented Reality,Technology,https://en.wikipedia.org/wiki/Augmented Reality
+AR glasses,Technology,https://en.wikipedia.org/wiki/AR
+Microsoft HoloLens,Technology,https://en.wikipedia.org/wiki/Microsoft HoloLens
+Vuzix Smart Glasses,Technology,https://en.wikipedia.org/wiki/Vuzix
+Magic Leap 1,Technology,https://en.wikipedia.org/wiki/Magic Leap
+Glass-up F4,Technology,https://en.wikipedia.org/wiki/F4
+LindeGO smart glasses,Technology,https://en.wikipedia.org/wiki/smart glasses
+Epson Moverio BT-35E,Technology,https://en.wikipedia.org/wiki/Epson
+Meta 2 AR glasses,Technology,https://en.wikipedia.org/wiki/Meta 2
+AR Software Development Kits,Technology,https://en.wikipedia.org/wiki/Software Development
+Soldamatic Simulator,Technology,https://en.wikipedia.org/wiki/Simulator
+HoloToolkit (HTK),Technology,https://en.wikipedia.org/wiki/HTK
+Google Project Tango Development Kit,Technology,https://en.wikipedia.org/wiki/Google
+ARKit framework,Technology,https://en.wikipedia.org/wiki/ARKit
+Vuforia Engine,Technology,https://en.wikipedia.org/wiki/Engine
+Pixyz Software,Technology,https://en.wikipedia.org/wiki/Software
+ARCore,Technology,https://en.wikipedia.org/wiki/ARCore
+Wikitude Studio,Technology,https://en.wikipedia.org/wiki/Wikitude
+Maxst,Technology, 
+EasyAR,Technology, 
+1 Mixed Reality Toolkit (MRTK),Technology,https://en.wikipedia.org/wiki/Mixed Reality
+AR and VR Software development Platforms and Technologies,Technology,https://en.wikipedia.org/wiki/VR
+Unity,Technology,https://en.wikipedia.org/wiki/Unity
+Autodesk 3ds Max,Technology,https://en.wikipedia.org/wiki/Autodesk 3ds Max
+Blender,Technology,https://en.wikipedia.org/wiki/Blender
+Motion Capture (MoCap),Technology,https://en.wikipedia.org/wiki/Motion Capture
+WebXR,Technology, 
+Additive manufacturing,Technology,https://en.wikipedia.org/wiki/Additive manufacturing
+3D Printers,Technology,https://en.wikipedia.org/wiki/3D Printers
+Creality C,Technology, 
+DR10,Technology,https://en.wikipedia.org/wiki/DR10
+Craftbot plus,Technology,https://en.wikipedia.org/wiki/plus
+3D Printing Technologies,Technology,https://en.wikipedia.org/wiki/3D Printing
+Fused Deposition Modeling (FDM),Technology,https://en.wikipedia.org/wiki/Fused Deposition Modeling
+Selective Laser Sintering (SLS),Technology,https://en.wikipedia.org/wiki/Selective Laser Sintering
+Selective Laser Melting (SLM),Technology,https://en.wikipedia.org/wiki/Selective Laser Melting
+Polyjet Modeling (PJM),Technology,https://en.wikipedia.org/wiki/Modeling
+Fused Filament Fabrication,Technology,https://en.wikipedia.org/wiki/Fused Filament Fabrication
+Cybersecurity Technologies,Technology,https://en.wikipedia.org/wiki/Cybersecurity
+Security Virtualization,Technology,https://en.wikipedia.org/wiki/Security
+Virtual Machine Monitor (VMM),Technology,https://en.wikipedia.org/wiki/Virtual Machine Monitor
+Data Protection,Technology,https://en.wikipedia.org/wiki/Data Protection
+Secure Communication Protocols,Technology,https://en.wikipedia.org/wiki/Secure Communication
+MACsec,Technology,https://en.wikipedia.org/wiki/MACsec
+Key Management System (KMS),Technology,https://en.wikipedia.org/wiki/Key Management
+Public Key Infrastructure (PKI),Technology,https://en.wikipedia.org/wiki/Public Key Infrastructure
+Encryption,Technology,https://en.wikipedia.org/wiki/Encryption
+Tokenization,Technology,https://en.wikipedia.org/wiki/Tokenization
+Blockchain,Technology,https://en.wikipedia.org/wiki/Blockchain
+Hyperledger Fabric,Technology,https://en.wikipedia.org/wiki/Hyperledger
+Ethereum virtual machine,Technology,https://en.wikipedia.org/wiki/Ethereum virtual machine
+Identity and Access Management,Technology,https://en.wikipedia.org/wiki/Identity and Access Management
+Protocols,Technology,https://en.wikipedia.org/wiki/Protocols
+Lightweight Directory Access Protocol (LDAP),Technology,https://en.wikipedia.org/wiki/Lightweight Directory Access Protocol
+User Management,Technology,https://en.wikipedia.org/wiki/User
+Passwords,Technology,https://en.wikipedia.org/wiki/Passwords
+Authentication,Technology,https://en.wikipedia.org/wiki/Authentication
+Authorization,Technology,https://en.wikipedia.org/wiki/Authorization
+Security Operations,Technology,https://en.wikipedia.org/wiki/Security
+Change Management,Technology,https://en.wikipedia.org/wiki/Change Management
+Asset Management,Technology,https://en.wikipedia.org/wiki/Asset Management
+Threat Detection and Analysis,Technology,https://en.wikipedia.org/wiki/Threat Detection
+Threat Intelligence,Technology,https://en.wikipedia.org/wiki/Threat
+Honeypot Networks,Technology,https://en.wikipedia.org/wiki/Honeypot
+Advanced Malware Detection,Technology,https://en.wikipedia.org/wiki/Advanced
+Foundational Security,Technology,https://en.wikipedia.org/wiki/Foundational
+Network Security,Technology,https://en.wikipedia.org/wiki/Network Security
+Firewall,Technology,https://en.wikipedia.org/wiki/Firewall
+Port Knocking Method,Technology,https://en.wikipedia.org/wiki/Port Knocking
+Intrusion Detection Systems/Intrusion Prevention Systems (IDS/IPS),Technology,https://en.wikipedia.org/wiki/Intrusion Detection Systems
+Network Access Control,Technology,https://en.wikipedia.org/wiki/Network Access Control
+Virtual Private Networks (VPN),Technology,https://en.wikipedia.org/wiki/Virtual Private Networks
+DDoS Mitigation,Technology,https://en.wikipedia.org/wiki/DDoS Mitigation
