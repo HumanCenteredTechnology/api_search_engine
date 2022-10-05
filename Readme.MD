@@ -1,3 +1,39 @@
+### Paper
+
+
+## Abstract 
+
+One of the biggest challenges for digital transfor-
+mation in the Industry 4.0 (I4.0) paradigm is the lack of mutual
+understanding between the academic and the industrial world.
+On the one hand, this can lead the industry to fail to apply
+new technologies and innovations from scientific research. At
+the same time, academics struggle to find and focus on real-
+world applications for their developing technological solutions.
+Moreover, the increasing complexity of industrial needs and
+technological solutions is widening this hiatus. To reduce this
+knowledge and communication gap, this article proposes a mixed
+approach of humanistic and engineering techniques applied to
+the technological and enterprise fields. The result of this study is
+represented by a taxonomy in which industrial needs and I4.0-
+focused technologies are categorized and connected so that it
+is possible to identify candidate solutions for an industrial need.
+Additionally, from the educational perspective, the taxonomy can
+help academics identify real-world scenarios to integrate them
+into the teaching process of digital technologies
+
+
+## Preprint 
+
+
+## Authors
+
+Riccardo Amadio , Roberto Figliè , Marios Tyrovolas , Student Member, IEEE, Chrysostomos Stylios ,
+Senior Member, IEEE, Łukasz Pa ́sko , Dorota Stadnicka , Anna Carreras-Coch , Agustín Zaballos , Joan
+Navarro , and Daniele Mazzei 
+
+
+
 ### Installation
 1. Install requirements : 
 ```bash
