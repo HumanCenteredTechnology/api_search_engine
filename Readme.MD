@@ -1,7 +1,7 @@
-### Paper
+## Paper
 
 
-## Abstract 
+### Abstract 
 
 One of the biggest challenges for digital transfor-
 mation in the Industry 4.0 (I4.0) paradigm is the lack of mutual
@@ -23,10 +23,10 @@ help academics identify real-world scenarios to integrate them
 into the teaching process of digital technologies
 
 
-## Preprint 
+### Preprint 
 
 
-## Authors
+### Authors
 
 Riccardo Amadio , Roberto Figliè , Marios Tyrovolas , Student Member, IEEE, Chrysostomos Stylios ,
 Senior Member, IEEE, Łukasz Pa ́sko , Dorota Stadnicka , Anna Carreras-Coch , Agustín Zaballos , Joan
@@ -34,7 +34,7 @@ Navarro , and Daniele Mazzei
 
 
 
-### Installation
+## Installation
 1. Install requirements : 
 ```bash
 pip install -r requirements.txt
@@ -53,14 +53,14 @@ python -m flask run
 [http://localhost:5000/](http://localhost:5000/)
 
 
-### Data 
+## Data 
 
 Inside the [data folder](data/) you can find and explore different version of the Taxonomy Database (SqLite,CSV,Excel).
 The [subfolder scripts](data/scripts/) it's helpful if you want to convert the data from the Production Database to different data types.
 
 
 
-### Todo
+## Todo
 
 - [ ] Pagination Api
 - [ ] Refactoring and performance improvement of application
