@@ -22,3 +22,11 @@ python -m flask run
 Inside the data folder you can find and explore different version of the Taxonomy Database (SqLite,CSV,Excel).
 The subfolder scripts it's helpful if you want to convert the data from the Production Database to different data types.
 
+
+
+### Todo
+
+- [ ] Refactoring and performance improvement of application
+- [ ] Replace Tagme with SWAT
+- [ ] Replace SQLite with Graph Database Knowledge
+- [ ] Find and Train a model to replace Tagme/SWAT with GraphDB
