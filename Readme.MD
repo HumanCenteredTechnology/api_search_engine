@@ -19,8 +19,8 @@ python -m flask run
 
 ### Data 
 
-Inside the data folder you can find and explore different version of the Taxonomy Database (SqLite,CSV,Excel).
-The subfolder scripts it's helpful if you want to convert the data from the Production Database to different data types.
+Inside the [data folder](data/) you can find and explore different version of the Taxonomy Database (SqLite,CSV,Excel).
+The [subfolder scripts](data/scripts/) it's helpful if you want to convert the data from the Production Database to different data types.
 
 
 
