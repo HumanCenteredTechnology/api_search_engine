@@ -15,3 +15,10 @@ python -m flask run
 4. Open default browser on page : 
 
 [http://localhost:5000/](http://localhost:5000/)
+
+
+### Data 
+
+Inside the data folder you can find and explore different version of the Taxonomy Database (SqLite,CSV,Excel).
+The subfolder scripts it's helpful if you want to convert the data from the Production Database to different data types.
+
