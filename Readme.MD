@@ -26,6 +26,7 @@ The subfolder scripts it's helpful if you want to convert the data from the Prod
 
 ### Todo
 
+- [ ] Pagination Api
 - [ ] Refactoring and performance improvement of application
 - [ ] Replace Tagme with SWAT
 - [ ] Replace SQLite with Graph Database Knowledge
