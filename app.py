@@ -30,7 +30,6 @@ def get_article_by_id(article_id):
     con = sqlite3.connect('taxonomy.db')
     df = pd.read_sql_query(
         f"SELECT * FROM articles WHERE id={article_id} ", con)
-    print(df["title"].iloc[0])
     if(df["authors"].iloc[0] is not None):
         df["authors"].iloc[0] = df["authors"].iloc[0].split(",")
     con.close()
@@ -90,24 +89,22 @@ def search(_input):
 
 def get_children_topic(topic):
     con = sqlite3.connect('taxonomy.db')
-    cur = con.cursor()
-    _childrens = cur.execute(
-        f"SELECT name FROM relations WHERE parent='{topic}'").fetchall()
+    _childrens = pd.read_sql_query(
+        f"SELECT name FROM relations WHERE parent LIKE '%{topic}%'",con)
     con.close()
-    return _childrens
+    return _childrens["name"].tolist()
 
 
 def prepare_info_snippet(topic):
     con = sqlite3.connect('taxonomy.db')
-    cur = con.cursor()
-    _info = cur.execute(
-        f"SELECT * FROM taxonomy WHERE name='{topic}'").fetchone()
-    _relation = cur.execute(
-        f"SELECT * FROM relations WHERE name='{topic}'").fetchone()
-    _parent_topic = _relation[2]
+    _info = pd.read_sql_query(
+        f"SELECT * FROM taxonomy WHERE name='{topic}'",con)
+    _relation = pd.read_sql_query(
+        f"SELECT * FROM relations WHERE name='{topic}'",con)
+    _parent_topic = _relation["parent"].iloc[0]
     _info = {
-        "snippet_title": _info[0],
-        "snippet_description": _info[2],
+        "snippet_title": _info["name"].iloc[0],
+        "snippet_description": _info["link"].iloc[0],
         "parent_topic": _parent_topic,
         "children_topics": get_children_topic(topic),
         "related_topics": {}
