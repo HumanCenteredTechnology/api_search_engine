@@ -31,7 +31,7 @@ def get_article_by_id(article_id):
     df = pd.read_sql_query(
         f"SELECT * FROM articles WHERE id={article_id} ", con)
     con.close()
-    return df.iloc[0].to_json()
+    return jsonify(df.iloc[0].to_json())
 
 @app.route("/not_json_add_article", methods=["POST"])
 def add_article_template():
@@ -77,8 +77,8 @@ def search(_input):
            return {}
        else:
         _use_cases = find_use_cases(_topics)
-        _use_cases_unrelated = unrelated_use_cases(_use_cases, _topics[0][1])
-        _use_cases_unrelated = retrieve_link_use_cases(_use_cases_unrelated)
+        # _use_cases_unrelated = unrelated_use_cases(_use_cases, _topics[0][1])
+        # _use_cases_unrelated = retrieve_link_use_cases(_use_cases_unrelated)
         _use_cases_related = retrieve_link_use_cases(_use_cases)
         _result_list = prepare_result_list(_use_cases_related)
         _filter_topics = prepare_filter_topics(_topics)
@@ -198,13 +198,13 @@ def retrieve_entities(id):
     _tech = []
     df = pd.read_sql_query(
         f"SELECT DISTINCT * FROM relations WHERE (articles LIKE '%,{id}%' OR articles LIKE '%{id},%') ", con)
+    
     if df.empty != True:
-        if (len(df.loc[df['category'] == 'Problems', 'name'].values) > 0):
-            _needs = df.loc[df['category'] ==
-                            'Problems', 'name'].values.tolist()
-        elif (len(df.loc[df['category'] == 'Technology', 'name'].values) > 0):
-            _tech = df.loc[df['category'] ==
-                           'Technology', 'name'].values.tolist()
+        for index, row in df.iterrows():
+            if row["category"] == "Problems":
+                _needs.append(row["name"])
+            else:
+                _tech.append(row["name"])
     con.close()
     return {"needs": _needs, "tech": _tech}
 
