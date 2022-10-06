@@ -30,7 +30,9 @@ def get_article_by_id(article_id):
     con = sqlite3.connect('taxonomy.db')
     df = pd.read_sql_query(
         f"SELECT * FROM articles WHERE id={article_id} ", con)
-    df["authors"].iloc[0] = df["authors"].iloc[0].split(",")
+    print(df["title"].iloc[0])
+    if(df["authors"].iloc[0] is not None):
+        df["authors"].iloc[0] = df["authors"].iloc[0].split(",")
     con.close()
     return jsonify(df.iloc[0].to_json())
 
