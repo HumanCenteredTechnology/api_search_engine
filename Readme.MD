@@ -24,8 +24,8 @@ The preprint version of the paper will be soon available.
 
 ### Authors
 
-Riccardo Amadio , Roberto Figliè , Marios Tyrovolas , Chrysostomos Stylios , Łukasz Pa ́sko , Dorota Stadnicka , Anna Carreras-Coch , Agustín Zaballos , Joan
-Navarro , and Daniele Mazzei 
+Riccardo Amadio, Roberto Figliè, Marios Tyrovolas, Chrysostomos Stylios, Łukasz Pa ́sko, Dorota Stadnicka, Anna Carreras-Coch, Agustín Zaballos, Joan
+Navarro, and Daniele Mazzei 
 
 ### Acknowledgments
 This work has been partially funded by Programme Erasmus+, Knowledge Alliances, Application No 621639-EPP-1-2020-1-IT-EPPKA2-KA, PLANET4: Practical Learning of Artificial iNtelligence on the Edge for indusTry 4.0.
