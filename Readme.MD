@@ -1,12 +1,15 @@
-## Repo for "Building a Taxonomy of Industry 4.0 Needs and Enabling Technologies" data
+# Repo for "Building a Taxonomy of Industry 4.0 Needs and Enabling Technologies" data
 
 ## Table of contents
 * [General Info](#general-info)
 * [Abstract](#abstract)
 * [Preprint](#preprint)
 * [Authors](#authors)
-* [Installation](#installation)
+* [Acknowledgments](#acknowledgments)
 * [Data](#data)
+* [Installation](#installation)
+
+
 
 ## General Info
 This repository collects all the data developed for the journal paper "Building a Taxonomy of Industry 4.0 Needs and Enabling Technologies", together with the code that renders those data queryable and usable within a search engine.
@@ -23,6 +26,16 @@ The preprint version of the paper will be soon available.
 
 Riccardo Amadio , Roberto Figliè , Marios Tyrovolas , Chrysostomos Stylios , Łukasz Pa ́sko , Dorota Stadnicka , Anna Carreras-Coch , Agustín Zaballos , Joan
 Navarro , and Daniele Mazzei 
+
+### Acknowledgments
+This work has been partially funded by Programme Erasmus+, Knowledge Alliances, Application No 621639-EPP-1-2020-1-IT-EPPKA2-KA, PLANET4: Practical Learning of Artificial iNtelligence on the Edge for indusTry 4.0.
+More on https://www.planet4project.eu/
+
+## Data 
+
+Inside the [data folder](data/) you can find and explore different version of the Taxonomy Database (SqLite,CSV,Excel).
+You can also explore the Taxonomy or know more about its definitions in a PDF format inside [this folder](data/PDF_versions/).
+The [subfolder scripts](data/scripts/) is helpful to convert the data from the Production Database to different data types.
 
 
 
@@ -44,12 +57,6 @@ python -m flask run
 
 [http://localhost:5000/](http://localhost:5000/)
 
-
-## Data 
-
-Inside the [data folder](data/) you can find and explore different version of the Taxonomy Database (SqLite,CSV,Excel).
-You can also explore the Taxonomy or know more about its definitions in a PDF format inside [this folder](data/PDF_versions/).
-The [subfolder scripts](data/scripts/) is helpful to convert the data from the Production Database to different data types.
 
 
 
