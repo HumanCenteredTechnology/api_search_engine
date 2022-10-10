@@ -13,7 +13,7 @@ This repository collects all the data developed for the journal paper "Building 
 
 ### Abstract 
 
-One of the biggest challenges for digital transformation in the Industry 4.0 (I4.0) paradigm is the lack of mutual understanding between the academic and the industrial world. On the one hand, this can lead the industry to fail to apply new technologies and innovations from scientific research. At the same time, academics struggle to find and focus on real-world applications for their developing technological solutions.Moreover, the increasing complexity of industrial needs and technological solutions is widening this hiatus. To reduce this knowledge and communication gap, this article proposes a mixed approach of humanistic and engineering techniques applied to the technological and enterprise fields. The result of this study is represented by a taxonomy in which industrial needs and I4.0-focused technologies are categorized and connected so that it is possible to identify candidate solutions for an industrial need. Additionally, from the educational perspective, the taxonomy can help academics identify real-world scenarios to integrate them into the teaching process of digital technologies.
+One of the biggest challenges for digital transformation in the Industry 4.0 (I4.0) paradigm is the lack of mutual understanding between the academic and the industrial world. On the one hand, this can lead the industry to fail to apply new technologies and innovations from scientific research. At the same time, academics struggle to find and focus on real-world applications for their developing technological solutions. Moreover, the increasing complexity of industrial needs and technological solutions is widening this hiatus. To reduce this knowledge and communication gap, this article proposes a mixed approach of humanistic and engineering techniques applied to the technological and enterprise fields. The result of this study is represented by a taxonomy in which industrial needs and I4.0-focused technologies are categorized and connected so that it is possible to identify candidate solutions for an industrial need. Additionally, from the educational perspective, the taxonomy can help academics identify real-world scenarios to integrate them into the teaching process of digital technologies.
 
 
 ### Preprint 
@@ -48,7 +48,7 @@ python -m flask run
 ## Data 
 
 Inside the [data folder](data/) you can find and explore different version of the Taxonomy Database (SqLite,CSV,Excel).
-You can also explore the Taxonomy or know more about its definitions in a PDF format inside the [PDF versions folder](data/PDF versions).
+You can also explore the Taxonomy or know more about its definitions in a PDF format inside [this folder](data/PDF_versions/).
 The [subfolder scripts](data/scripts/) is helpful to convert the data from the Production Database to different data types.
 
 
