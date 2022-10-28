@@ -1,4 +1,4 @@
-# Repo for "Building a Taxonomy of Industry 4.0 Needs and Enabling Technologies" data
+# Repo for "Towards a Taxonomy of Industrial Needs and Enabling Technologies in Industry 4.0" data
 
 ## Table of contents
 * [General Info](#general-info)
@@ -12,7 +12,7 @@
 
 
 ## General Info
-This repository collects all the data developed for the journal paper "Building a Taxonomy of Industry 4.0 Needs and Enabling Technologies", together with the code that renders those data queryable and usable within a search engine.
+This repository collects all the data developed for the journal paper "Towards a Taxonomy of Industrial Needs and Enabling Technologies in Industry 4.0", together with the code that renders those data queryable and usable within a search engine.
 An interactive version of the Planet4 Taxonomy is available on http://taxonomy.planet4project.eu/
 
 ### Abstract 
