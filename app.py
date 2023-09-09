@@ -1,16 +1,135 @@
-from flask import Flask, send_from_directory, request, render_template, jsonify
+from functools import wraps
+import time
+from webbrowser import get
+import pandas as pd
+from flask import Flask, send_from_directory, request, render_template, jsonify, g
 from flask_cors import CORS
 from autocomplete import Autocomplete
 import tagme
+import secrets
+import jwt
+import datetime
 import csv
 import sqlite3
-import pandas as pd
+from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
 
 tagme.GCUBE_TOKEN = "cbaed484-466a-44cd-a27d-610036404f01-843339462"
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 autocomplete = Autocomplete()
+# Chiave segreta per firmare e verificare i token
+app.config['SECRET_KEY'] = "TAXONOMY"
+
+
+
+# Middleware per controllare l'autenticazione
+def login_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        token = request.headers.get('Authorization')
+
+        if not token:
+            return jsonify({'message': 'Token mancante'}), 403
+
+        try:
+            data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+        except:
+            return jsonify({'message': 'Token non valido'}), 403
+
+        return f(*args, **kwargs)
+    return decorated
+
+# Registrazione
+@app.route('/register', methods=['POST'])
+def register():
+    data = request.get_json()
+    username = data['username']
+    password = generate_password_hash(data['password'], method='sha256')
+    
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
+    cursor.execute('INSERT INTO users (username, password) VALUES (?, ?)', (username, password))
+    conn.commit()
+    conn.close()
+    
+    return jsonify({'message': 'Utente registrato con successo'}), 201
+
+
+@app.route('/login', methods=['POST'])
+def login():
+    try:
+        data = request.get_json(force=True)  # Legge i dati JSON dal corpo della richiesta
+        
+        if not data or not data.get('username') or not data.get('password'):
+            return jsonify({'message': 'Credenziali mancanti'}), 401
+
+        username = data['username']
+        password = data['password']
+
+        conn = sqlite3.connect('users.db')
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM users WHERE username = ?', (username,))
+        user = cursor.fetchone()
+        conn.close()
+
+        if not user or not check_password_hash(user[2], password):
+            return jsonify({'message': 'Credenziali non valide'}), 401
+
+        token = jwt.encode({'username': user[1], 'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)}, app.config['SECRET_KEY'], algorithm='HS256')
+
+        # Salva l'utente autenticato in g.logged_in_user
+        g.logged_in_user = user[1]
+        return jsonify({'token': token}), 200  # 200 indica "OK"
+
+    except Exception as e:
+        # Gestisci gli errori in caso di problemi durante il login
+        print("Errore durante il login:", e)
+        return jsonify({'message': 'Errore durante il login'}), 500
+
+
+# Aggiungi questa rotta alla fine del file
+@app.route('/logout', methods=['POST'])
+@login_required
+def logout():
+    g.logged_in_user = None  # Rimuovi l'utente dalla sessione
+    return jsonify({'message': 'Logout effettuato con successo'})
+
+@app.route('/protected')
+@login_required
+def protected():
+    return jsonify({'message': f'Accesso consentito per {g.logged_in_user}'})
+
+
+@app.route('/add_article', methods=['POST'])
+def add_article():
+    # Ottieni i dati inviati con la richiesta POST
+    data = request.form
+
+    # Stampiamo il contenuto di data per debug
+    print("Dati ricevuti:", data)
+
+    article_title = data.get('title', '')
+    article_link = data.get('link', '')
+    article_journal = data.get('journal', '')
+    article_authors = data.get('authors', '')
+    article_publishing_date = data.get('publishing_date', '')
+    article_doi = data.get('doi', '')
+    article_source_type = data.get('source_type', '')
+    article_abstract = data.get('abstract', '')
+
+    # Inserimento nell'archivio dei dati
+    conn = sqlite3.connect('taxonomy.db')
+    cursor = conn.cursor()
+    cursor.execute('INSERT INTO articles (title, link, journal, authors, publishing_date, doi, source_type, abstract) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', (article_title, article_link, article_journal, article_authors, article_publishing_date, article_doi, article_source_type, article_abstract))
+    conn.commit()
+    conn.close()
+
+    # Restituisci una risposta di conferma
+    response = {'message': 'Articolo aggiunto con successo'}
+    return jsonify(response), 201  # 201 indica "Created"
+
 
 
 @app.route('/', methods=["GET"])
@@ -38,21 +157,33 @@ def get_article_by_id(article_id):
 @app.route("/not_json_add_article", methods=["POST"])
 def add_article_template():
    _title = request.form.get('title')
+   _link = request.form.get('link')
+   _sourceType = request.form.get('_source type')
+   _journal = request.form.get('journal')
+   _authors = request.form.get('authors')
+   _doi = request.form.get('doi')
+   _publicationDate = request.form.get('publicationDate')
    _abstract = request.form.get('abstract')
-   _body = request.form.get('body')
-   _annotations = list(tagme.annotate(_title).get_annotations(0.1))+list(tagme.annotate(
-       _abstract).get_annotations(0.1))+list(tagme.annotate(_body).get_annotations(0.1))
+   _annotations = list(tagme.annotate(_title).get_annotations(0.1))+list(tagme.annotate(_link).get_annotations(0.1))+list(tagme.annotate(_sourceType).get_annotations(0.1))+list(tagme.annotate(
+       _journal).get_annotations(0.1))+list(tagme.annotate(_authors).get_annotations(0.1))+list(tagme.annotate(
+       _doi).get_annotations(0.1))+list(tagme.annotate(_publicationDate).get_annotations(0.1))+list(tagme.annotate(_abstract).get_annotations(0.1))
    left_side, right_side = search_annotations_on_taxonomy(_annotations)
-   return render_template('add_article_results.html', results={"founded_elements": left_side, "not_founded_elements": right_side})
+   return render_template('add_article_results.html', results = {"founded_elements": left_side, "not_founded_elements": right_side})
 
 
-@app.route("/add_article", methods=["POST"])
+@app.route("/form", methods = ["POST"])
 def add_article_json():
    _title = request.form.get('title')
+   _link = request.form.get('link')
+   _sourceType = request.form.get('_source type')
+   _journal = request.form.get('journal')
+   _authors = request.form.get('authors')
+   _doi = request.form.get('doi')
+   _publicationDate = request.form.get('publicationDate')
    _abstract = request.form.get('abstract')
-   _body = request.form.get('body')
-   _annotations = list(tagme.annotate(_title).get_annotations(0.1))+list(tagme.annotate(
-       _abstract).get_annotations(0.1))+list(tagme.annotate(_body).get_annotations(0.1))
+   _annotations = list(tagme.annotate(_title).get_annotations(0.1))+list(tagme.annotate(_link).get_annotations(0.1))+list(tagme.annotate(_sourceType).get_annotations(0.1))+list(tagme.annotate(
+       _journal).get_annotations(0.1))+list(tagme.annotate(_authors).get_annotations(0.1))+list(tagme.annotate(
+       _doi).get_annotations(0.1))+list(tagme.annotate(_publicationDate).get_annotations(0.1))+list(tagme.annotate(_abstract).get_annotations(0.1))
    left_side, right_side = search_annotations_on_taxonomy(_annotations)
    return jsonify({"founded_elements": left_side, "not_founded_elements": right_side})
 
@@ -159,6 +290,30 @@ def unrelated_use_cases(_use_cases, _category):
 def suggestion():
     word = request.args['word']
     return jsonify({"word": autocomplete.search(word)})
+
+
+def controlla_nuove_righe(topic, articles, i):
+    con = sqlite3.connect('taxonomy.db')
+    cursor = sqlite3.connect.cursor()
+    ultimo_id = 0
+
+    while True:
+        # Ottenere l'ID massimo corrente nella tabella
+        cursor.execute(f"SELECT MAX(id) FROM articles")
+        result = cursor.fetchone()
+        nuovo_id = result[0] if result[0] else 0
+
+        if nuovo_id > ultimo_id:
+            # Ci sono nuove righe nella tabella
+            cursor.execute(f"SELECT * FROM articles WHERE id > ?", (ultimo_id,))
+            nuove_righe = cursor.fetchall()
+            # Elabora le nuove righe come desiderato
+            for riga in nuove_righe:
+            # Aggiorna l'ultimo ID
+                ultimo_id = nuovo_id
+        time.sleep(i)
+    conn.close()
+    return {"nuove_righe": nuove_righe}
 
 
 def get_opposite_category(_category):
