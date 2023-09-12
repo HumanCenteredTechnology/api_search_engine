@@ -14,6 +14,7 @@ import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 
+
 tagme.GCUBE_TOKEN = "cbaed484-466a-44cd-a27d-610036404f01-843339462"
 
 app = Flask(__name__)
@@ -40,6 +41,12 @@ def login_required(f):
 
         return f(*args, **kwargs)
     return decorated
+
+# Funzione per generare il token
+def generate_token(username):
+    # Genera il token con il nome utente come payload e una chiave segreta
+    token = jwt.encode({'username': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)}, app.config['SECRET_KEY'], algorithm='HS256')
+    return token
 
 # Registrazione
 @app.route('/register', methods=['POST'])
@@ -77,7 +84,9 @@ def login():
         if not user or not check_password_hash(user[2], password):
             return jsonify({'message': 'Credenziali non valide'}), 401
 
-        token = jwt.encode({'username': user[1], 'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)}, app.config['SECRET_KEY'], algorithm='HS256')
+        # Genera il token con il nome utente
+        token = generate_token(username)
+
 
         # Salva l'utente autenticato in g.logged_in_user
         g.logged_in_user = user[1]
@@ -89,12 +98,12 @@ def login():
         return jsonify({'message': 'Errore durante il login'}), 500
 
 
-# Aggiungi questa rotta alla fine del file
 @app.route('/logout', methods=['POST'])
 @login_required
 def logout():
     g.logged_in_user = None  # Rimuovi l'utente dalla sessione
     return jsonify({'message': 'Logout effettuato con successo'})
+
 
 @app.route('/protected')
 @login_required
@@ -103,12 +112,13 @@ def protected():
 
 
 @app.route('/add_article', methods=['POST'])
+
 def add_article():
     # Ottieni i dati inviati con la richiesta POST
     data = request.form
 
     # Stampiamo il contenuto di data per debug
-    print("Dati ricevuti:", data)
+    #print("Dati ricevuti:", data)
 
     article_title = data.get('title', '')
     article_link = data.get('link', '')
@@ -122,12 +132,22 @@ def add_article():
     # Inserimento nell'archivio dei dati
     conn = sqlite3.connect('taxonomy.db')
     cursor = conn.cursor()
-    cursor.execute('INSERT INTO articles (title, link, journal, authors, publishing_date, doi, source_type, abstract) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', (article_title, article_link, article_journal, article_authors, article_publishing_date, article_doi, article_source_type, article_abstract))
+    
+    # Ottengo l'ultimo ID presente nel database
+    cursor.execute('SELECT MAX(id) FROM articles')
+    last_article_id = cursor.fetchone()[0]
+
+    # Calcola l'ID successivo
+    new_article_id = last_article_id + 1
+
+    # Inserimento nell'archivio dei dati con l'ID successivo
+    cursor.execute('INSERT INTO articles (id, title, link, journal, authors, publishing_date, doi, source_type, abstract) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', (new_article_id, article_title, article_link, article_journal, article_authors, article_publishing_date, article_doi, article_source_type, article_abstract))
+
     conn.commit()
     conn.close()
 
     # Restituisci una risposta di conferma
-    response = {'message': 'Articolo aggiunto con successo'}
+    response = {'message': 'Articolo aggiunto con successo', 'article_id': new_article_id}
     return jsonify(response), 201  # 201 indica "Created"
 
 
@@ -290,30 +310,6 @@ def unrelated_use_cases(_use_cases, _category):
 def suggestion():
     word = request.args['word']
     return jsonify({"word": autocomplete.search(word)})
-
-
-def controlla_nuove_righe(topic, articles, i):
-    con = sqlite3.connect('taxonomy.db')
-    cursor = sqlite3.connect.cursor()
-    ultimo_id = 0
-
-    while True:
-        # Ottenere l'ID massimo corrente nella tabella
-        cursor.execute(f"SELECT MAX(id) FROM articles")
-        result = cursor.fetchone()
-        nuovo_id = result[0] if result[0] else 0
-
-        if nuovo_id > ultimo_id:
-            # Ci sono nuove righe nella tabella
-            cursor.execute(f"SELECT * FROM articles WHERE id > ?", (ultimo_id,))
-            nuove_righe = cursor.fetchall()
-            # Elabora le nuove righe come desiderato
-            for riga in nuove_righe:
-            # Aggiorna l'ultimo ID
-                ultimo_id = nuovo_id
-        time.sleep(i)
-    conn.close()
-    return {"nuove_righe": nuove_righe}
 
 
 def get_opposite_category(_category):
